@@ -1,5 +1,42 @@
-<app-header></app-header>
-
-<router-outlet></router-outlet>
-
-<app-footer></app-footer>
+<nav>
+  <p>{{title}}</p>
+  <div class="searchBar">
+    <input type="text" placeholder="What are you looking for?">
+    <img src="../assets/search_icon.png" width="20px" height="20px">
+  </div>
+  <ul class="navMenu">
+    <li>Home</li>
+    <li>Sign In</li>
+    <li>Sign Up</li>
+    <li>Contact Us</li>
+    <li>About Us</li>
+  </ul>
+</nav>
+<div class="topBar">
+  <h1>{{title}}</h1>
+  <p>{{description}}</p>
+</div>
+<section class="timeLineSection">
+  <h2>Timeline</h2>
+  <div class="timeLineBox"></div>
+</section>
+<section class="pastProjectSection">
+  <div class="pastProjectCard">
+    <p>Project 1</p>
+  </div>
+  <div class="pastProjectCard">
+    <p>Project 2</p>
+  </div>
+  <div class="pastProjectCard">
+    <p>Project 3</p>
+  </div>
+  <div class="pastProjectCard">
+    <p>Project 4</p>
+  </div>
+</section>
+<footer>
+  <p>Capstone Comrades</p>
+  <p>Terms of Services</p>
+  <p>Contact Us</p>
+  <p>About Us</p>
+</footer>

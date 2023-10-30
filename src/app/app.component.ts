@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'capstone-comrades';
+  title: string = 'Capstone Comrades';
+  description: string = 'A team formation platform for the Capstone Project at KFUPM'
 }
