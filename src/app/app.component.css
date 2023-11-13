@@ -1,11 +1,15 @@
+#mainContent {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    align-content: center;
     padding-inline: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     color: white;
     font-size: 17px;
     background-color: #475B5A;
@@ -29,10 +33,15 @@ nav input {
     margin-right: 5px;
 }
 
-nav .searchBar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#navRight {
+  display: flex;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 100px;
 }
 
 nav img {
@@ -43,7 +52,7 @@ nav img {
 
 
 .topBar {
-    background-color: #FFD700;
+    background-image: linear-gradient(to right, rgba(0,255,0,0), rgba(0,255,0,1));
     margin: 0px 100px 0px 100px;
     border-radius: 50px;
     display: flex;
@@ -58,6 +67,10 @@ h1 {
     margin: 50px 0px 25px 0px;
 }
 
+h2 {
+  margin-left: 120px;
+}
+
 .timeLineSection {
     padding: 10px;
 }
@@ -65,7 +78,7 @@ h1 {
 .timeLineBox {
     border-radius: 25px;
     background: white;
-    margin: 10px 100px 10px 100px; 
+    margin: 10px 100px 10px 100px;
     height: 300px;
 }
 
@@ -78,9 +91,9 @@ h1 {
 .pastProjectCard {
     border-radius: 25px;
     background: white;
-    margin: 10px 100px 10px 100px; 
-    height: 200px;
-    width: 200px;
+    margin: 10px 100px 10px 100px;
+    height: 400px;
+    width: 4500px;
     position: relative;
 }
 
@@ -90,8 +103,18 @@ h1 {
     bottom: 0;
 }
 
+hr {
+  border-top: 2px solid black;
+}
+
 footer {
     display: flex;
     justify-content: space-between;
-    margin: 0px 25px 0px 25px;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: auto;
+}
+
+footer div {
+  padding: 10px;
 }
