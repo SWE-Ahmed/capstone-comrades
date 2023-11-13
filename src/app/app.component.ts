@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title: string = 'Capstone Comrades';
   description: string = 'A team formation platform for the Capstone Project at KFUPM'
+  pastProjects: string[] = ["Project 1", "Project 2", "Project 3", "Project 4"]
 }
