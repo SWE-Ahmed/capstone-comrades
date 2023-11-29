@@ -1,0 +1,16 @@
+
+.container{
+    height: 100px;
+    border-bottom: 1px solid var(--foreground-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p {
+
+    color : var(--text-color-1);
+    margin: 10px;
+
+}
+

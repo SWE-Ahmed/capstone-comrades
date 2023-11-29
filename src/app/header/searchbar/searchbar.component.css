@@ -1,0 +1,11 @@
+div {
+    display:flex;
+}
+
+input {
+    background-color: #74A897;
+}
+
+button {
+    background-color: var(--green-color-3);
+}

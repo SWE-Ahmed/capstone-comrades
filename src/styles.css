@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+:root {
+    --background-color: #212529;
+    --foreground-color: #3A3F45;
+    --text-color-1: #EAEDF2;
+    --text-color-2: #9FA2A8;
+    --text-color-3: #DDE6ED;
+    --green-color-1: #1FB16E;
+    --green-color-2: #198754;
+    --green-color-3: #0F7553;
+  }
+
+
+body {
+  background-color: var(--background-color);
+}
