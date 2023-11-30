@@ -1,10 +1,10 @@
 
-#header-box{
-    
+header{    
     border-bottom: 1px solid var(--foreground-color);
 }
 p {
     color : var(--text-color-1);
     margin: 10px;
     font-weight: 700;
+    font-size: 20px;
 }
