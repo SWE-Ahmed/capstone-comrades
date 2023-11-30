@@ -6,6 +6,11 @@ input {
     background-color: #74A897;
 }
 
+::placeholder {
+    font-weight: 700;
+}
+
 button {
     background-color: var(--green-color-3);
 }
+
