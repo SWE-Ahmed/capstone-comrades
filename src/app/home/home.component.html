@@ -1,0 +1,20 @@
+<div id="mainContent">
+  <div class="topBar">
+    <div class="topBarText">
+      <h1>{{ title }}</h1>
+      <p>{{ description }}</p>
+    </div>
+    <img src="assets/topBar_image.png" width="180px" height="180px" />
+  </div>
+  <section class="timeLineSection">
+    <h2>Timeline</h2>
+    <div class="timeLineBox"></div>
+  </section>
+  <h2>Past Projects</h2>
+  <section class="pastProjectSection">
+    <!--Creating the pastproject card dynamically-->
+    <div class="pastProjectCard" *ngFor="let project of pastProjects">
+      <p>{{ project }}</p>
+    </div>
+  </section>
+</div>

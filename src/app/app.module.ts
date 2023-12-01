@@ -18,6 +18,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { AccountInfoComponent } from './account-info/account-info.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SignupComponent } from './signup/signup.component';
+import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 //routes
 const routes: Routes = [
@@ -38,7 +42,11 @@ const routes: Routes = [
     TeamCardComponent,
     ProfileComponent,
     EditProfileComponent,
-    AccountInfoComponent
+    AccountInfoComponent,
+    NavbarComponent,
+    SignupComponent,
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     HttpClientModule,

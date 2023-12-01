@@ -1,0 +1,64 @@
+#mainContent {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .topBar {
+      background-color: #212529;
+      margin: 40px 40px 0px 40px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      flex-direction: row;
+      border: 1px solid #3A3F45;
+      padding: 20px;
+  }
+  
+  
+  .topBarText h1 {
+      color: #0F7553;
+  }
+  
+  .topBarText p {
+      color: #9FA2A8;
+  }
+  
+  h2 {
+    margin-left: 120px;
+  }
+  
+  .timeLineSection {
+      padding: 10px;
+  }
+  
+  .timeLineBox {
+      border-radius: 25px;
+      background: white;
+      margin: 10px 100px 10px 100px;
+      height: 300px;
+  }
+  
+  .pastProjectSection {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+  }
+  
+  .pastProjectCard {
+      border-radius: 25px;
+      background: white;
+      margin: 10px 100px 10px 100px;
+      height: 400px;
+      width: 4500px;
+      position: relative;
+  }
+  
+  .pastProjectCard p {
+      margin: 20px;
+      position: absolute;
+      bottom: 0;
+  }
+  
