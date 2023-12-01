@@ -6,13 +6,21 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { AccountInfoComponent } from './account-info/account-info.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SignupComponent } from './signup/signup.component';
+import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     EditProfileComponent,
-    AccountInfoComponent
+    AccountInfoComponent,
+    NavbarComponent,
+    SignupComponent,
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
