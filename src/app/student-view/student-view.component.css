@@ -1,0 +1,12 @@
+a {
+    width: 207px;
+    height: 26px;
+    flex-shrink: 0;
+    color: #EAEDF2;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+}
