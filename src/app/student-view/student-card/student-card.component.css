@@ -31,3 +31,16 @@ p {
     background: #198754;
     
 }
+
+a {
+    width: 146px;
+    height: 26px;
+    flex-shrink: 0;
+    text-decoration: none;
+    color: #9FA2A8;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

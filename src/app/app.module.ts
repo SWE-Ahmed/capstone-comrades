@@ -8,6 +8,15 @@ import { NavbarComponent } from './header/navbar/navbar.component';
 import { SearchbarComponent } from './header/searchbar/searchbar.component';
 import { StudentViewComponent } from './student-view/student-view.component';
 import { StudentCardComponent } from './student-view/student-card/student-card.component';
+import { TeamViewComponent } from './team-view/team-view.component';
+import { TeamCardComponent } from './team-view/team-card/team-card.component';
+import { RouterModule, Routes } from '@angular/router';
+
+//routes
+const routes: Routes = [
+  {path:'students', component: StudentViewComponent},
+  {path:'teams', component: TeamViewComponent}
+]
 
 @NgModule({
   declarations: [
@@ -18,10 +27,13 @@ import { StudentCardComponent } from './student-view/student-card/student-card.c
     SearchbarComponent,
     StudentViewComponent,
     StudentCardComponent,
+    TeamViewComponent,
+    TeamCardComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
