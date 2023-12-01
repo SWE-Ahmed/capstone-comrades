@@ -1,48 +1,7 @@
-<div id="mainContent">
-  <nav>
-    <div id="navRight">
-      <p>{{title}}</p>
-      <div class="searchBar">
-        <input type="text" placeholder="What are you looking for?">
-        <img src="../assets/search_icon.png" width="20px" height="20px">
-      </div>
-    </div>
-    <ul class="navMenu">
-      <li>Home</li>
-      <li>Sign In</li>
-      <li>Sign Up</li>
-      <li>Contact Us</li>
-      <li>About Us</li>
-    </ul>
-  </nav>
-  <div class="topBar">
-    <h1>{{title}}</h1>
-    <p>{{description}}</p>
-  </div>
-  <section class="timeLineSection">
-    <h2>Timeline</h2>
-    <div class="timeLineBox"></div>
-  </section>
-  <h2>Past Projects</h2>
-  <section class="pastProjectSection">
-    <!--Creating the pastproject card dynamically-->
-    <div class="pastProjectCard" *ngFor="let project of pastProjects">
-      <p>{{project}}</p>
-    </div>
-  </section>
-</div>
-<hr>
-<footer>
-  <div>
-    Capstone Comrades
-  </div>
-  <div>
-    Terms of Services
-  </div>
-  <div>
-    Contact Us
-  </div>
-  <div>
-    About Us
-  </div>
-</footer>
+<!--Insert navbar component-->
+<app-navbar></app-navbar>
+<hr style="border: 1px solid #3A3F45">
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
+<hr style="border: 1px solid #3A3F45">
+<app-footer></app-footer>

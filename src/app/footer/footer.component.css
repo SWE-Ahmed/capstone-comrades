@@ -1,0 +1,11 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: auto;
+}
+
+footer div {
+  padding: 10px;
+}
