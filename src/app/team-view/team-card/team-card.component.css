@@ -1,0 +1,45 @@
+.card {
+    width: 373px;
+    height: 646px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 3px solid #3A3F45;
+    background: #212529;
+}
+
+p {
+    color: #EAEDF2;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 45px; /* 187.5% */
+    display: inline;
+}
+
+.tags {
+  
+    font-weight: 722;
+}
+
+.card-img-top {
+    width: 373px;
+    height: 286px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 3px solid #3A3F45;
+    background: #198754;
+}
+
+a {
+    width: 146px;
+    height: 26px;
+    flex-shrink: 0;
+    text-decoration: none;
+    color: #9FA2A8;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
