@@ -35,4 +35,8 @@ Capstone Comrades emerges from the new opportunity within KFUPM with regards to 
 
 ### Team view
 
-WIP
+- ~~team-cards~~
+
+- grid 70% 
+    margins and padding
+    dynamic loading
