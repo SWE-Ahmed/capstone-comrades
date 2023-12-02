@@ -11,32 +11,32 @@ Capstone Comrades emerges from the new opportunity within KFUPM with regards to 
 
 ### Header
 
-- Search bar 70%
-    size adjustments 
+- Search bar 90%
+    ~~size adjustments~~
     functionality
 
 - navbar 90%
     dropdown menu
 
 
-### Footer
+### ~~Footer~~
 
-- footer 95%
-    margins adjustments
+- ~~footer~~
+    ~~margins adjustments~~
 
 
 ### View students
 
 - ~~student-cards~~
 
-- grid 70% 
-    margins and padding
+- grid 90% 
+    ~~margins and padding~~
     dynamic loading
 
 ### Team view
 
 - ~~team-cards~~
 
-- grid 70% 
-    margins and padding
+- grid 90% 
+    ~~margins and padding~~
     dynamic loading

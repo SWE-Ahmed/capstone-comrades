@@ -10,3 +10,11 @@ a {
     line-height: normal;
     text-decoration: none;
 }
+
+.text-center {
+    margin-bottom: 35px;
+}
+
+.container {
+    margin-top: 35px;
+}

@@ -4,14 +4,32 @@ div {
 
 input {
     background-color: #74A897;
+    box-sizing: border-box;
+}
+
+input:focus {
+    background-color: #74A897;
 }
 
 ::placeholder {
-    font-weight: 700;
-    font-size: 22px;
+
+    font-weight: 722;
+    font-size: 18px;
+    transition: color 1s ease;
+}
+
+input:focus::placeholder {
+    color : transparent;
 }
 
 button {
     background-color: var(--green-color-3);
+}
+
+i {
+    height: 33;
+    width: 33;
+    font-size: 18px;
+
 }
 
