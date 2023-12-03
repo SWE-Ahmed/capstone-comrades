@@ -14,6 +14,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { CardService } from './services/card.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 //routes
 const routes: Routes = [
   {path:'students', component: StudentViewComponent},
@@ -34,6 +36,7 @@ const routes: Routes = [
   ],
   imports: [
     HttpClientModule,
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

@@ -18,9 +18,15 @@ div a:hover {
 }
 
 .text-center {
+    margin-top: 35px;
     margin-bottom: 35px;
 }
 
 .container {
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.col-md-6 {
     margin-top: 35px;
 }

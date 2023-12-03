@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./searchbar.component.css']
 })
 export class SearchbarComponent {
-  placeholder = "Write a student's name"
+  placeholder = "Search";
 
 }
 

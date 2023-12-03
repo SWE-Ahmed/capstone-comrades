@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { CardService } from 'src/app/services/card.service';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-student-view',
   templateUrl: './student-view.component.html',
-  styleUrls: ['./student-view.component.css']
+  styleUrls: ['./student-view.component.css'],
+  animations: [
+    trigger('fadeInOut', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('300ms', style({ opacity: 1 })),
+      ]),
+    ]),
+  ],
 })
 export class StudentViewComponent implements OnInit {
   cards: any[] = [];
-  visibleCardCount = 6; // Number of cards initially visible
-  showMore = true; // Toggle "Show more" button
+  visibleCardCount = 6;
+  showMore = true;
 
   constructor(private cardService: CardService) {}
 
@@ -21,11 +30,11 @@ export class StudentViewComponent implements OnInit {
   }
 
   showMoreCards() {
-    this.visibleCardCount += 6; // Show 6 more cards
+    this.visibleCardCount += 6; 
     this.updateVisibleCards();
   }
 
   private updateVisibleCards() {
-    this.showMore = this.visibleCardCount < this.cards.length; // Toggle "Show more" button
+    this.showMore = this.visibleCardCount < this.cards.length;
   }
 }

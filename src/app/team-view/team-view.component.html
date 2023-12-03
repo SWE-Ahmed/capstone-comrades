@@ -1,20 +1,7 @@
-<!-- team-view.component.html -->
-<!-- <div class="container">
-  <div class="row mb-3">
-    <div *ngFor="let card of cards.slice(0, visibleCardCount)" class="col-md-4">
-      <team-card [card]="card"></team-card>
-    </div>
-  </div>
-  <div class="text-center" *ngIf="showMore">
-    <a (click)="showMoreCards()">Show more>></a>
-  </div>
-</div>
- -->
-
 
  <div class="container">
   <div class="row mb-3">
-    <div *ngFor="let card of allCards.slice(0, visibleCardCount)" class="col-md-4">
+    <div *ngFor="let card of allCards.slice(0, visibleCardCount)" class="col-md-4" [@fadeInOut]>
       <team-card [card]="card"></team-card>
     </div>
   </div>
