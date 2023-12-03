@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +9,5 @@ export class AppComponent {
   title: string = 'Capstone Comrades';
   description: string = 'Your best destination to form or join your Capstone Project Team'
   pastProjects: string[] = ["Project 1", "Project 2", "Project 3", "Project 4"]
+  
 }

@@ -52,3 +52,53 @@ h1 {
     background: #9FA2A8;
     box-shadow: -55px -51px 4px 10px rgba(0, 0, 0, 0.50);
 }
+
+.modal-dialog-centered {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: unset;
+  }
+  
+  
+.popup {
+margin: 70px auto;
+padding: 20px;
+background: #fff;
+border-radius: 5px;
+width: 50%;
+position: relative;
+transition: all 5s ease-in-out;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.popup h2 {
+margin-top: 0;
+color: #333;
+}
+
+.popup .content {
+max-height: 30%;
+color: #333;
+overflow: auto;
+}
+
+.popup .btn-success {
+    margin: 10px;
+    padding: 5px 15px 5px 15px;
+}
+
+@media screen and (max-width: 700px){
+.popup{
+    width: 70%;
+}
+}
