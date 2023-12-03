@@ -6,27 +6,15 @@ h1 {
     font-size: 128px;
 }
 
-#boxWrapper1 input {
-    width: 250px;
-}
-
-#boxWrapper2 input {
+input {
     width: 500px;
 }
 
-#boxWrapper1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#boxWrapper2 {
+#boxWrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
 }
 
 .btn-success {
@@ -46,9 +34,19 @@ h1 {
     justify-content: center;
 }
 
+.imageRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .container {
     margin-top: 100px;
     border-radius: 40px;
     background: #9FA2A8;
     box-shadow: -55px -51px 4px 10px rgba(0, 0, 0, 0.50);
+}
+
+.forgotPass {
+    float: left;
 }
