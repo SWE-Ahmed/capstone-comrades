@@ -1,28 +1,24 @@
-<div class="container">
-    <div class="row mb-3">
-      <div class="col-md-4">
-        <team-card></team-card>
-      </div>
-      <div class="col-md-4">
-        <team-card></team-card>
-      </div>
-      <div class="col-md-4">
-        <team-card></team-card>
-      </div>
+<!-- team-view.component.html -->
+<!-- <div class="container">
+  <div class="row mb-3">
+    <div *ngFor="let card of cards.slice(0, visibleCardCount)" class="col-md-4">
+      <team-card [card]="card"></team-card>
     </div>
-    <div class="row mb-3">
-      <div class="col-md-4">
-        <team-card></team-card>
-      </div>
-      <div class="col-md-4">
-        <team-card></team-card>
-      </div>
-      <div class="col-md-4">
-        <team-card></team-card>
-      </div>
-    </div>
-    <div class="text-center">
-      <a href="">Show more>></a>
-    </div>
+  </div>
+  <div class="text-center" *ngIf="showMore">
+    <a (click)="showMoreCards()">Show more>></a>
+  </div>
 </div>
-  
+ -->
+
+
+ <div class="container">
+  <div class="row mb-3">
+    <div *ngFor="let card of allCards.slice(0, visibleCardCount)" class="col-md-4">
+      <team-card [card]="card"></team-card>
+    </div>
+  </div>
+  <div class="text-center" *ngIf="showMore">
+    <a (click)="showMoreCards()">Show more >></a>
+  </div>
+</div>

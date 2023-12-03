@@ -1,31 +1,34 @@
-<div class="container">
-    <div class="row mb-3">
-      <div class="col-md-6">
-        <student-card></student-card>
-      </div>
-      <div class="col-md-6">
-        <student-card></student-card>
-      </div>
+<!-- <div class="container">
+  <div class="row mb-3">
+    <div class="col-md-6" *ngFor="let card of cards.slice(0, 2)">
+      <student-card [card]="card"></student-card>
     </div>
-    <div class="row mb-3">
-      <div class="col-md-6">
-        <student-card></student-card>
-      </div>
-      <div class="col-md-6">
-        <student-card></student-card>
-      </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-6" *ngFor="let card of cards.slice(2, 4)">
+      <student-card [card]="card"></student-card>
     </div>
-    <div class="row mb-3">
-        <div class="col-md-6">
-          <student-card></student-card>
-        </div>
-        <div class="col-md-6">
-          <student-card></student-card>
-        </div>
-    </div>
+  </div>
+  <div class="row mb-3">
+      <div class="col-md-6" *ngFor="let card of cards.slice(4, 6)">
+        <student-card [card]="card"></student-card>
+      </div>
+  </div>
 
-    <div class="text-center">
-      <a href="">Show more>></a>
+  <div class="text-center" *ngIf="showMore">
+    <a (click)="showMoreCards()">Show more >></a>
+  </div>
+</div> -->
+
+
+
+<div class="container">
+  <div class="row mb-3">
+    <div *ngFor="let card of cards.slice(0, visibleCardCount)" class="col-md-6">
+      <student-card [card]="card"></student-card>
     </div>
+  </div>
+  <div class="text-center" *ngIf="showMore">
+    <a (click)="showMoreCards()">Show more >></a>
+  </div>
 </div>
-  

@@ -9,3 +9,4 @@ export class SearchbarComponent {
   placeholder = "Write a student's name"
 
 }
+

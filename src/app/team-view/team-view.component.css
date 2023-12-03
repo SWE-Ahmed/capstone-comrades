@@ -1,4 +1,4 @@
-a {
+div a {
     width: 207px;
     height: 26px;
     flex-shrink: 0;
@@ -9,6 +9,12 @@ a {
     font-weight: 700;
     line-height: normal;
     text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+div a:hover {
+    color: #eaedf276;
 }
 
 .text-center {
