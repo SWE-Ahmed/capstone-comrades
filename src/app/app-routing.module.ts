@@ -11,7 +11,7 @@ import { PastProjectsViewComponent } from './past-projects-view/past-projects-vi
 import { ProjectPageComponent } from './project-page/project-page.component';
 
 const routes: Routes = [
-  {'path':'home-view', 'component':HomeComponent},
+  {'path':'', 'component':HomeComponent},
   {'path':'signin-view', 'component': SigninComponent},
   {'path': 'signup-view', 'component':SignupComponent},
   {'path': 'signup-view/submit', 'component':SignupSubmitComponent},
@@ -26,6 +26,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { 
+export class AppRoutingModule {
 
 }
