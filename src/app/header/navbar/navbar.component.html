@@ -1,8 +1,30 @@
 <nav>
-        <a href="">Home</a>
-        <a href="">Username</a>
-        <img src="assets/dropdown.svg" width="30" height="33">
-        <a href="teams">Teams</a>
-        <a href="students">Students</a>
-        <a href="">Logout</a>
+  <ul class="navMenu">
+    <li>
+      <a
+        routerLink="/home-view"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Home</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/signin-view"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Sign In</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/signup-view"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >Sign Up</a
+      >
+    </li>
+    <li>Contact Us</li>
+    <li>About Us</li>
+  </ul>
 </nav>
