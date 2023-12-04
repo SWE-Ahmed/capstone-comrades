@@ -1,0 +1,199 @@
+h2 {
+  color: #0f7553;
+  text-align: center;
+  font-family: Inter;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 722;
+  line-height: normal;
+}
+
+h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #0f7553;
+  font-size: 128px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper {
+  display: flex;
+  height: fit-content;
+  justify-content: space-around;
+}
+
+input {
+  width: 500px;
+}
+
+/* For buttons */
+
+.btn-success {
+  border-radius: 50px;
+  /* background-color: #198754; */
+
+  padding: 0.625rem 0.625rem;
+
+  width: 13.6875rem;
+  height: 3.125rem;
+
+  color: #dde6ed;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 722;
+  line-height: normal;
+}
+
+#btnWrapper {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  margin-top: 0.7rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+}
+
+/* End of buttons */
+
+.imageRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.forgotPass {
+  float: left;
+}
+
+.personal-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.field-wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 4px;
+  width: fit-content;
+}
+
+.form-control {
+  width: 25.8125rem;
+  height: 3.625rem;
+  margin-top: 1.5rem;
+  padding: 10px;
+  flex-shrink: 0;
+  fill: #dde6ed;
+  border-radius: 50px;
+  border: 0 solid white;
+  color: #0f7553;
+  font-family: Inter;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+select {
+  width: 14.25rem;
+  height: 3.625rem;
+  flex-shrink: 0;
+  margin-top: 1.5rem;
+  padding-left: 4.2rem;
+  flex-shrink: 0;
+  fill: #dde6ed;
+  border-radius: 40px;
+  border: 0 solid white;
+  color: #0f7553;
+  font-family: Inter;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.form-label {
+  position: absolute;
+  width: 8.9375rem;
+  height: 1.625rem;
+  left: 2rem;
+  color: #dde6ed;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.img {
+  position: absolute;
+  height: 2rem;
+  right: 1rem;
+  bottom: 0.8rem;
+  cursor: pointer;
+}
+
+.select-label {
+  position: absolute;
+  width: 8.9375rem;
+  height: 1.625rem;
+  left: 2rem;
+  color: #dde6ed;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.textarea-interest {
+  width: 25.8125rem;
+  height: 13rem;
+  margin-top: 1.5rem;
+  padding: 10px;
+  flex-shrink: 0;
+  fill: #dde6ed;
+  border-radius: 50px;
+  border: 0 solid white;
+  color: #0f7553;
+  font-family: Inter;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  resize: none;
+}
+
+.textarea-bio {
+  width: 52.125rem;
+  height: 12rem;
+  flex-shrink: 0;
+  margin-top: 1.5rem;
+  padding: 20px;
+
+  flex-shrink: 0;
+  fill: #dde6ed;
+  border-radius: 50px;
+  border: 0 solid white;
+  color: #0f7553;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  resize: none;
+}
