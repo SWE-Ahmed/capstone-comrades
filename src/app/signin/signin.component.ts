@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent {
+  constructor(private router: Router) {
+  }
 
+  launchProfile(path: string): void {
+    this.router.navigate([path])
+  }
 }
