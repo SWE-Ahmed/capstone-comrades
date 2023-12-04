@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-signup-submit',
@@ -8,13 +9,14 @@ import { Router } from '@angular/router';
 })
 export class SignupSubmitComponent {
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private auth: AuthService) {
   }
 
   popup: boolean = false;
 
-  closePopup(path: string): void {
+  closePopup(email: string, password:string): void {
     this.popup = false;
-    this.router.navigate([path]);
+    console.log(email, password)
+    this.auth.signUp(email, password)
   }
 }

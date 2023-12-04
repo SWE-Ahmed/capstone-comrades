@@ -4,17 +4,17 @@
     <div id="boxWrapper">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="2020XXXXX@kfupm.edu.sa">
+            <input type="email" class="form-control" #emailValue id="exampleFormControlInput1" placeholder="2020XXXXX@kfupm.edu.sa">
         </div>
         <!--Password box-->
         <div class="mb-3">
             <label for="inputPassword5" class="form-label">Password</label>
-            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+            <input type="password" id="inputPassword5" class="form-control" #passwordValue aria-describedby="passwordHelpBlock">
         </div>
         <label class="forgotPass">Forgot Passowrd?</label>
     </div>
     <div id="btnWrapper">
-        <button type="button" class="btn btn-success" (click)="launchProfile('profile')">Sign In</button>
+        <button type="button" class="btn btn-success" (click)="launchProfile(emailValue.value, passwordValue.value)">Sign In</button>
     </div>
 </div>
 <div class="imageRow">

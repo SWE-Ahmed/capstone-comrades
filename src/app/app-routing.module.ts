@@ -7,7 +7,7 @@ import { SignupSubmitComponent } from './signup-submit/signup-submit.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 const routes: Routes = [
-  {'path':'home-view', 'component':HomeComponent},
+  {'path':'', 'component':HomeComponent},
   {'path':'signin-view', 'component': SigninComponent},
   {'path': 'signup-view', 'component':SignupComponent},
   {'path': 'signup-view/submit', 'component':SignupSubmitComponent},
@@ -18,6 +18,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { 
+export class AppRoutingModule {
 
 }

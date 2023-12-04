@@ -16,13 +16,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { AccountInfoComponent } from './account-info/account-info.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { NavbarHeaderComponent } from './header/navbar/navbar.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupSubmitComponent } from './signup-submit/signup-submit.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from '../environments/environment';
 
 //routes
 const routes: Routes = [
@@ -44,7 +46,6 @@ const routes: Routes = [
     ProfileComponent,
     EditProfileComponent,
     AccountInfoComponent,
-    NavbarComponent,
     SignupComponent,
     HomeComponent,
     FooterComponent,
@@ -57,7 +58,9 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
   ],
   providers: [CardService],
   bootstrap: [AppComponent]
