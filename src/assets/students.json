@@ -1,0 +1,67 @@
+[
+    {
+      "name": "John Doe",
+      "kfupmId": "123456",
+      "major": "Computer Science",
+      "concentration": "Data Science",
+      "imageSrc": "image-5",
+      "showMoreLink": "/john-doe-details"
+    },
+    {
+      "name": "Jane Doe",
+      "kfupmId": "654321",
+      "major": "Electrical Engineering",
+      "concentration": "Power Systems",
+      "imageSrc": "image-5",
+      "showMoreLink": "/jane-doe-details"
+    },
+    {
+      "name": "Alice Smith",
+      "kfupmId": "789012",
+      "major": "Mechanical Engineering",
+      "concentration": "Thermal Sciences",
+      "imageSrc": "image-5",
+      "showMoreLink": "/alice-smith-details"
+    },
+    {
+      "name": "Bob Johnson",
+      "kfupmId": "345678",
+      "major": "Chemical Engineering",
+      "concentration": "Process Engineering",
+      "imageSrc": "image-5",
+      "showMoreLink": "/bob-johnson-details"
+    },
+    {
+      "name": "Eva Martinez",
+      "kfupmId": "987654",
+      "major": "Civil Engineering",
+      "concentration": "Structural Engineering",
+      "imageSrc": "image-5",
+      "showMoreLink": "/eva-martinez-details"
+    },
+    {
+      "name": "Michael Wang",
+      "kfupmId": "567890",
+      "major": "Biomedical Engineering",
+      "concentration": "Biomechanics",
+      "imageSrc": "image-5",
+      "showMoreLink": "/michael-wang-details"
+    },
+    {
+      "name": "Sophie Brown",
+      "kfupmId": "112233",
+      "major": "Aerospace Engineering",
+      "concentration": "Astrodynamics",
+      "imageSrc": "image-5",
+      "showMoreLink": "/sophie-brown-details"
+    },
+    {
+      "name": "Oliver White",
+      "kfupmId": "445566",
+      "major": "Environmental Engineering",
+      "concentration": "Water Resources",
+      "imageSrc": "image-5",
+      "showMoreLink": "/oliver-white-details"
+    }
+  ]
+  

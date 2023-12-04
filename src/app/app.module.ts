@@ -11,7 +11,7 @@ import { StudentCardComponent } from './student-view/student-card/student-card.c
 import { TeamViewComponent } from './team-view/team-view.component';
 import { TeamCardComponent } from './team-view/team-card/team-card.component';
 import { RouterModule, Routes } from '@angular/router';
-import { CardService } from './services/card.service';
+import { CardService } from './services/card.service' ;
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

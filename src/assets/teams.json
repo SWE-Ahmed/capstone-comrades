@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Capstone Comrades",
+    "currentMembersMajors": "SWE,CS",
+    "wantedMajors": "EE,ISE",
+    "projectConcentration": "IOT,Networks",
+    "imageSrc": "",
+    "showMoreLink": "https://example.com/card1"
+  },
+  {
+    "name": "Another Group",
+    "currentMembersMajors": "CS,Math",
+    "wantedMajors": "Physics,Chemistry",
+    "projectConcentration": "Data Science",
+    "imageSrc": "path/to/image2.jpg",
+    "showMoreLink": "https://example.com/card2"
+  },
+  {
+    "name": "Group 3",
+    "currentMembersMajors": "Physics,Math",
+    "wantedMajors": "SWE,ISE",
+    "projectConcentration": "Robotics",
+    "imageSrc": "path/to/image3.jpg",
+    "showMoreLink": "https://example.com/card3"
+  },
+  {
+    "name": "Tech Innovators",
+    "currentMembersMajors": "EE,CS",
+    "wantedMajors": "Mechanical Engineering",
+    "projectConcentration": "Artificial Intelligence",
+    "imageSrc": "path/to/image4.jpg",
+    "showMoreLink": "https://example.com/card4"
+  },
+  {
+    "name": "Data Wizards",
+    "currentMembersMajors": "Data Science,Statistics",
+    "wantedMajors": "Math,Physics",
+    "projectConcentration": "Big Data Analytics",
+    "imageSrc": "path/to/image5.jpg",
+    "showMoreLink": "https://example.com/card5"
+  },
+  {
+    "name": "Web Dev Team",
+    "currentMembersMajors": "CS,IT",
+    "wantedMajors": "Graphic Design",
+    "projectConcentration": "Web Development",
+    "imageSrc": "path/to/image6.jpg",
+    "showMoreLink": "https://example.com/card6"
+  },
+  {
+    "name": "AI Enthusiasts",
+    "currentMembersMajors": "CS,EE",
+    "wantedMajors": "Physics,Math",
+    "projectConcentration": "Machine Learning",
+    "imageSrc": "path/to/image7.jpg",
+    "showMoreLink": "https://example.com/card7"
+  },
+  {
+    "name": "Cyber Security Team",
+    "currentMembersMajors": "CS,IT",
+    "wantedMajors": "Networks,ISE",
+    "projectConcentration": "Cyber Security",
+    "imageSrc": "path/to/image8.jpg",
+    "showMoreLink": "https://example.com/card8"
+  },
+  {
+    "name": "Renewable Energy Group",
+    "currentMembersMajors": "Mechanical Engineering,EE",
+    "wantedMajors": "Environmental Science",
+    "projectConcentration": "Renewable Energy",
+    "imageSrc": "path/to/image9.jpg",
+    "showMoreLink": "https://example.com/card9"
+  },
+  {
+    "name": "Space Exploration Society",
+    "currentMembersMajors": "Physics,CS",
+    "wantedMajors": "Astronomy",
+    "projectConcentration": "Space Exploration",
+    "imageSrc": "path/to/image10.jpg",
+    "showMoreLink": "https://example.com/card10"
+  },
+  {
+    "name": "Innovative Coders",
+    "currentMembersMajors": "CS,Math",
+    "wantedMajors": "EE,Physics",
+    "projectConcentration": "Software Development",
+    "imageSrc": "path/to/image11.jpg",
+    "showMoreLink": "https://example.com/card11"
+  },
+  {
+    "name": "BioTech Explorers",
+    "currentMembersMajors": "Biology,Chemistry",
+    "wantedMajors": "Biomedical Engineering",
+    "projectConcentration": "Biotechnology",
+    "imageSrc": "path/to/image12.jpg",
+    "showMoreLink": "https://example.com/card12"
+  },
+  {
+    "name": "Game Dev Alliance",
+    "currentMembersMajors": "CS,Graphic Design",
+    "wantedMajors": "Music,Art",
+    "projectConcentration": "Game Development",
+    "imageSrc": "path/to/image13.jpg",
+    "showMoreLink": "https://example.com/card13"
+  },
+  {
+    "name": "Environmental Stewards",
+    "currentMembersMajors": "Environmental Science,Geology",
+    "wantedMajors": "Civil Engineering",
+    "projectConcentration": "Environmental Conservation",
+    "imageSrc": "path/to/image14.jpg",
+    "showMoreLink": "https://example.com/card14"
+  },
+  {
+    "name": "Quantum Computing Collective",
+    "currentMembersMajors": "Physics,CS",
+    "wantedMajors": "Math,Electrical Engineering",
+    "projectConcentration": "Quantum Computing",
+    "imageSrc": "path/to/image15.jpg",
+    "showMoreLink": "https://example.com/card15"
+  },
+  {
+    "name": "HealthTech Pioneers",
+    "currentMembersMajors": "Biomedical Engineering,CS",
+    "wantedMajors": "Medicine",
+    "projectConcentration": "Healthcare Technology",
+    "imageSrc": "path/to/image16.jpg",
+    "showMoreLink": "https://example.com/card16"
+  },
+  {
+    "name": "Urban Planning Squad",
+    "currentMembersMajors": "Urban Planning,Architecture",
+    "wantedMajors": "Civil Engineering",
+    "projectConcentration": "Smart Cities",
+    "imageSrc": "path/to/image17.jpg",
+    "showMoreLink": "https://example.com/card17"
+  },
+  {
+    "name": "Artificial Reality Creators",
+    "currentMembersMajors": "CS,Design",
+    "wantedMajors": "Psychology",
+    "projectConcentration": "Virtual Reality",
+    "imageSrc": "path/to/image18.jpg",
+    "showMoreLink": "https://example.com/card18"
+  },
+  {
+    "name": "Marine Conservation Society",
+    "currentMembersMajors": "Marine Biology,Environmental Science",
+    "wantedMajors": "Oceanography",
+    "projectConcentration": "Marine Conservation",
+    "imageSrc": "path/to/image19.jpg",
+    "showMoreLink": "https://example.com/card19"
+  },
+  {
+    "name": "Inclusive Tech Collective",
+    "currentMembersMajors": "CS,Human-Computer Interaction",
+    "wantedMajors": "Sociology",
+    "projectConcentration": "Accessibility Technology",
+    "imageSrc": "path/to/image20.jpg",
+    "showMoreLink": "https://example.com/card20"
+  }
+]

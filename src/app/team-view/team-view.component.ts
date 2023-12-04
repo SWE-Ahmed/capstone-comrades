@@ -1,6 +1,6 @@
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { CardService } from 'src/app/services/card.service';
+import { CardService } from "src/app/services/card.service"
 
 @Component({
   selector: 'app-team-view',
