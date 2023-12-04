@@ -2,7 +2,7 @@ h2 {
   color: #0f7553;
   text-align: center;
   font-family: Inter;
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-style: normal;
   font-weight: 722;
   line-height: normal;
@@ -26,6 +26,7 @@ h1 {
 .wrapper {
   display: flex;
   height: fit-content;
+
   justify-content: space-around;
 }
 
@@ -34,6 +35,12 @@ input {
 }
 
 /* For buttons */
+#boxWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .btn-success {
   border-radius: 50px;
@@ -57,7 +64,7 @@ input {
   flex-direction: row;
   align-content: center;
   justify-content: center;
-  margin-top: 0.7rem;
+  margin-top: 1rem;
   justify-content: center;
   align-items: center;
   gap: 0.625rem;
@@ -162,7 +169,6 @@ select {
 
 .textarea-interest {
   width: 25.8125rem;
-  height: 13rem;
   margin-top: 1.5rem;
   padding: 10px;
   flex-shrink: 0;
@@ -184,7 +190,6 @@ select {
   flex-shrink: 0;
   margin-top: 1.5rem;
   padding: 20px;
-
   flex-shrink: 0;
   fill: #dde6ed;
   border-radius: 50px;
