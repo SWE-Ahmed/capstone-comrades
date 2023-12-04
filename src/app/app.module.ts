@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileComponent } from './profile/profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { AccountInfoComponent } from './account-info/account-info.component';
 
 //routes
 const routes: Routes = [
@@ -36,7 +37,8 @@ const routes: Routes = [
     TeamViewComponent,
     TeamCardComponent,
     ProfileComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    AccountInfoComponent
   ],
   imports: [
     HttpClientModule,
