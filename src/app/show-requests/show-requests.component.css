@@ -1,0 +1,47 @@
+div p {
+    color: #EAEDF2;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+div a {
+    width: 207px;
+    height: 26px;
+    flex-shrink: 0;
+    color: #EAEDF2;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.container {
+    margin-bottom: 35px;
+}
+
+#request-type .col {
+    width: 172px;
+    height: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #3A3F45;
+    background: #212529;
+}
+
+
+#requests #head .col-md-2 {
+    border: 3px solid #3A3F45;
+    width: 205px; 
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

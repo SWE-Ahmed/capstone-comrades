@@ -1,0 +1,17 @@
+.col-md-2 {
+    margin: 0;
+    padding: 0;
+    border: 3px solid #3A3F45;
+    width: 205px; 
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#buttons {
+    padding-left: 20px;
+    justify-content: flex-start;
+    border: None;
+}
+
