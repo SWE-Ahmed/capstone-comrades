@@ -23,6 +23,8 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupSubmitComponent } from './signup-submit/signup-submit.component';
+import { ShowRequestsComponent } from './show-requests/show-requests.component';
+import { RequestCardComponent } from './show-requests/request-card/request-card.component';
 
 //routes
 const routes: Routes = [
@@ -49,7 +51,9 @@ const routes: Routes = [
     HomeComponent,
     FooterComponent,
     SigninComponent,
-    SignupSubmitComponent
+    SignupSubmitComponent,
+    ShowRequestsComponent,
+    RequestCardComponent
   ],
   imports: [
     HttpClientModule,
