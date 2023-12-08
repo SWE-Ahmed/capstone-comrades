@@ -45,8 +45,9 @@
       <request-card [request]="request"></request-card> 
     </div>
 
+    <div class="col-md-4 mt-4" *ngIf="showMore">
+      <a (click)="showMoreCards()">Show more >></a>
+    </div>
 </div>
 
-<div class="text-center" *ngIf="showMore">
-  <a (click)="showMoreCards()">Show more >></a>
-</div>
+
