@@ -1,0 +1,37 @@
+
+#bio {
+    width: 902px;
+    height: 250px;
+    background: #212529;
+}
+
+#bio .card-text {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #9FA2A8;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+#bio .row.g-0 {
+    border-radius: 0px 5px 5px 0px;
+    border: 3px solid #3A3F45;
+}
+
+#members .col-md-6 {
+    margin-top: 50px;
+}
+
+#members #position {
+    color: #9FA2A8;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+

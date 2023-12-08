@@ -1,0 +1,33 @@
+<div class="container" id="team">
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="card mb-3" id="bio">
+        <div class="dropdown">
+          <div class="row g-0">
+            <div class="col-md-4" id="image-div">
+              <img src="assets/tech-titans.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <p class="card-text">
+                Welcome to Tech Titans! We're a team of developers, designers, and project managers passionate about creating a seamless platform for students to connect and form teams for their final year projects. Our goal is to simplify the team formation process, so students can focus on their projects and achieve academic success.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="members">
+    <div class="row mb-3" >
+        <div *ngFor="let card of cards.slice(0, 7)" class="col-md-6" [@fadeInOut]>
+                <div id="position">
+                    <p>
+                        Member
+                    </p>
+                </div>
+              <student-card [card]="card"></student-card>
+        </div>
+    </div>
+  </div>
+  
+  

@@ -5,13 +5,15 @@ import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupSubmitComponent } from './signup-submit/signup-submit.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { ViewMyTeamComponent } from './view-my-team/view-my-team.component';
 
 const routes: Routes = [
   {'path':'home-view', 'component':HomeComponent},
   {'path':'signin-view', 'component': SigninComponent},
   {'path': 'signup-view', 'component':SignupComponent},
   {'path': 'signup-view/submit', 'component':SignupSubmitComponent},
-  {'path': 'profile', 'component': EditProfileComponent}
+  {'path': 'profile', 'component': EditProfileComponent},
+  {'path': 'my-team', 'component': ViewMyTeamComponent}
 ];
 
 @NgModule({
