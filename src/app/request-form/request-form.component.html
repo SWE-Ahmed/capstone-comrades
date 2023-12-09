@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <p class="d-inline">Sending request to <span class="name">Name</span></p>
+    </div>
+    <div class="row">
+        <p>
+            Add a picture:
+        </p>
+      <div class="mt-3 image-container" (click)="openFileInput()">
+        <img [src]="selectedImage || 'assets/blank-image.png'" class="img-fluid" alt="Selected Image">
+      </div>
+      <input type="file" id="imageInput" accept="image/*" style="display: none" (change)="onImageSelected($event)">
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <label for="textField"><p>Add Message:</p></label>
+            <input type="text" class="form-control align-top" id="textField" [(ngModel)]="textFieldValue" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-auto"> 
+          <button type="button" class="btn btn-success">Submit</button>
+        </div>
+      </div>
+  </div>
+  

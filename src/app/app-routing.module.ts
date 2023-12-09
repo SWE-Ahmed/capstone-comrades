@@ -6,6 +6,7 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupSubmitComponent } from './signup-submit/signup-submit.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ShowRequestsComponent } from './show-requests/show-requests.component';
+import { RequestFormComponent } from './request-form/request-form.component';
 
 const routes: Routes = [
   {'path':'home-view', 'component':HomeComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {'path': 'signup-view', 'component':SignupComponent},
   {'path': 'signup-view/submit', 'component':SignupSubmitComponent},
   {'path': 'profile', 'component': EditProfileComponent},
-  {'path': 'show-requests', 'component': ShowRequestsComponent}
+  {'path': 'show-requests', 'component': ShowRequestsComponent},
+  {'path': 'request-form','component': RequestFormComponent}
 ];
 
 @NgModule({
