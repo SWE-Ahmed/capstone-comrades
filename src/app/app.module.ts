@@ -27,6 +27,8 @@ import { ShowRequestsComponent } from './show-requests/show-requests.component';
 import { RequestCardComponent } from './show-requests/request-card/request-card.component';
 import { PopUpComponent } from './pop-up/pop-up.component';
 import { RequestFormComponent } from './request-form/request-form.component';
+import { PastProjectsViewComponent } from './past-projects-view/past-projects-view.component';
+import { PastProjectCardComponent } from './past-projects-view/past-project-card/past-project-card.component';
 
 //routes
 const routes: Routes = [
@@ -57,7 +59,9 @@ const routes: Routes = [
     ShowRequestsComponent,
     RequestCardComponent,
     PopUpComponent,
-    RequestFormComponent
+    RequestFormComponent,
+    PastProjectsViewComponent,
+    PastProjectCardComponent
   ],
   imports: [
     HttpClientModule,
