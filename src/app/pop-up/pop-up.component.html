@@ -1,0 +1,80 @@
+<!-- Modal -->
+<div class="modal" [id]="modalId" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">
+            {{type}}
+        </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="text-center">
+                <img src="assets/daniel.png" alt="Centered Image" class="img-fluid">
+            </div>
+
+            <ng-container *ngIf="type === 'Request'; then requestContent else null"></ng-container>
+            <ng-container *ngIf="type === 'Student'; then studentContent else null"></ng-container>
+            <ng-container *ngIf="type === 'Team'; then teamContent else null"></ng-container>
+        </div>
+        <div class="modal-footer">
+          <ng-container *ngIf="type === 'Request'; then requestFooter else null"></ng-container>
+          <ng-container *ngIf="type !== 'Request'; then commonFooter else null"></ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<ng-template #requestContent>
+    <div class="text-left">
+        <p class="bold">From:</p>{{info.name}} <br>
+        <p class="bold">Team:</p>{{info.team}} <br>
+        <p class="bold">Date:</p>{{info.date}} <br>
+        <br>
+        <p class="bold">Message:</p><br>
+        Hi Daniel,
+
+    I'm reaching out because I think you'd be a great fit for our team. We're working on some exciting AI projects and I believe your skills and experience would be a valuable addition. Would you be interested in joining our team?
+
+    Best,
+    Ali Alqutayfi
+    </div>
+</ng-template>
+  
+
+<ng-template #studentContent>
+    <p class="bold">Name:</p>{{info.name}}
+    <p class="bold">Team:</p>{{info.team}}
+    <p class="bold">Major:</p>{{info.major}}
+    <br>
+    <p class="bold">Skills:</p>Software Engineering Life Sycle Expert, AI, Web Engineering, Phone Apps Development, Desktop Applications Development, Telegram/WhatsApp Bots Development, Problem Solving, Data Structure and Algorithm Expert, Database Engineering, UI&UX, Data Analysis/Analytics, Project Management, Leadership, Teamwork.
+    <br>
+    <p class="bold">About:</p>Hi, I'm Abdulmohseen AlAli, a software engineering student with a passion for creating innovative solutions that make a real impact. With expertise in AI, web development, and mobile app development, I've got the skills to bring your ideas to life. I'm also well-versed in data analysis, UI/UX design, and project management, so you can be sure that your project is in good hands. Let's collaborate and turn your vision into a reality!
+    <br>
+    <p class="bold">Links:</p>LinkedIn: https://www.linkedin.com/in/abdulmohseenalialali/
+    GitHub: https://github.com/ABDULMOHSEEN-AlAli
+
+</ng-template>
+  
+
+<ng-template #teamContent>
+    <p class="bold">Name:</p>{{info.name}}
+    <p class="bold">Field:</p>{{info.team}}
+    <p class="bold">Mentor:</p>{{info.date}}
+    <p class="bold">Leader:</p>{{info.date}}
+
+    <br>
+    <p class="bold">Members:</p> Ali Alqutayfi, Daniel Alsadiq, Abdulmohseen AlAli, Hassan Alsayhah.
+    <br>
+    <p class="bold">About:</p>Welcome to Tech Titans! We're a team of developers, designers, and project managers passionate about creating a seamless platform for students to connect and form teams for their final year projects. Our goal is to simplify the team formation process, so students can focus on their projects and achieve academic success.
+</ng-template>
+  
+<ng-template #requestFooter>
+  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Accept</button>
+  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Reject</button>
+</ng-template>
+
+<ng-template #commonFooter>
+  <button type="button" class="btn btn-success">Request to Join</button>
+</ng-template>

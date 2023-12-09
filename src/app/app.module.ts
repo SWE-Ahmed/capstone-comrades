@@ -25,6 +25,7 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupSubmitComponent } from './signup-submit/signup-submit.component';
 import { ShowRequestsComponent } from './show-requests/show-requests.component';
 import { RequestCardComponent } from './show-requests/request-card/request-card.component';
+import { PopUpComponent } from './pop-up/pop-up.component';
 
 //routes
 const routes: Routes = [
@@ -53,7 +54,8 @@ const routes: Routes = [
     SigninComponent,
     SignupSubmitComponent,
     ShowRequestsComponent,
-    RequestCardComponent
+    RequestCardComponent,
+    PopUpComponent
   ],
   imports: [
     HttpClientModule,

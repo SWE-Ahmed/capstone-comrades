@@ -41,12 +41,13 @@
         </div>
       </div>
   
-    <div *ngFor="let request of allrequests.slice(0, visibleCardCount)" class="row" [@fadeInOut]>
-      <request-card [request]="request"></request-card> 
+    <div *ngFor="let request of allrequests.slice(0, visibleCardCount); let i=index" class="row" [@fadeInOut]>
+      <request-card [request]="request" [modalId]="'pop-up'+ i" ></request-card> 
+      <pop-up [info]="request" [type]="'Request'" [modalId]="'pop-up'+i"></pop-up>    
     </div>
 
     <div class="col-md-4 mt-4" *ngIf="showMore">
-      <a (click)="showMoreCards()">Show more >></a>
+      <a (click)="showMoreCards()" >Show more >></a>
     </div>
 </div>
 

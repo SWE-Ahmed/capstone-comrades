@@ -7,5 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class RequestCardComponent {
   @Input() request: any;
+  @Input() modalId: string ='';
 
 }

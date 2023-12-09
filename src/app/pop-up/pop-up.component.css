@@ -1,0 +1,47 @@
+.modal-content {
+    background-color: #212529; 
+}
+
+.modal-header {
+    border-bottom: 2px solid #3A3F45;;
+}
+
+.modal-footer {
+    border-top: 2px solid #3A3F45;
+}
+
+.modal-title {
+    color: #EAEDF2;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.modal-body {
+    color: #9FA2A8;
+    font-family: Inter;
+    /* not sure about font-size */
+    font-size: 22px; 
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bold {
+    color: #EAEDF2;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    display:inline-block;
+}
+
+.text-left {
+    text-align: left;
+    display:inline-block;
+}
+
