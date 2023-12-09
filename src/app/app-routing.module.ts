@@ -9,23 +9,29 @@ import { ShowRequestsComponent } from './show-requests/show-requests.component';
 import { RequestFormComponent } from './request-form/request-form.component';
 import { PastProjectsViewComponent } from './past-projects-view/past-projects-view.component';
 import { ProjectPageComponent } from './project-page/project-page.component';
+import { authGuard } from './auth.guard';
 
 const routes: Routes = [
-  {'path':'', 'component':HomeComponent},
-  {'path':'signin-view', 'component': SigninComponent},
-  {'path': 'signup-view', 'component':SignupComponent},
-  {'path': 'signup-view/submit', 'component':SignupSubmitComponent},
-  {'path': 'profile', 'component': EditProfileComponent},
-  {'path': 'show-requests', 'component': ShowRequestsComponent},
-  {'path': 'request-form','component': RequestFormComponent},
-  {'path':'projects','component':PastProjectsViewComponent},
-  {'path':'projects/:projectId','component':ProjectPageComponent}
+  { path: '', component: HomeComponent },
+  {
+    path: 'signin',
+    component: SigninComponent,
+  },
+  {
+    path: 'profile',
+    component: EditProfileComponent,
+    canActivate: [authGuard],
+  },
+  { path: 'signup', component: SignupComponent },
+  { path: 'signup/submit', component: SignupSubmitComponent },
+  { path: 'show-requests', component: ShowRequestsComponent },
+  { path: 'request-form', component: RequestFormComponent },
+  { path: 'projects', component: PastProjectsViewComponent },
+  { path: 'projects/:projectId', component: ProjectPageComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule {
-
-}
+export class AppRoutingModule {}
