@@ -28,11 +28,11 @@ export class ViewMyTeamComponent implements OnInit {
     });
   }
 
-  toggleSidePanel() {
-    const appContainer = document.getElementById('app-container');
-    if (appContainer) {
-      appContainer.classList.toggle('show-side-panel');
-    }
-  }
 
+  isSidenavVisible: boolean = false;
+
+  toggleSidenav() {
+    this.isSidenavVisible = !this.isSidenavVisible;
+  }
+  
 }

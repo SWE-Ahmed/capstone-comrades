@@ -1,3 +1,46 @@
+
+<!-- this is not working  -->
+<div class="sidenav" id="sidenav-1" [ngClass]="{ 'collapse': !isSidenavVisible }">
+  <ul class="sidenav-menu" style="list-style-type: none;">
+    <li class="sidenav-item">
+      <a href="" class="sidenav-link">
+        <span>Show Team</span>
+      </a>
+    </li>
+    <li class="sidenav-item">
+      <a href="" class="sidenav-link">
+        <span>Edit Team</span>
+      </a>
+    </li>
+    <li class="sidenav-item">
+      <a href="" class="sidenav-link">
+        <span>Schedule Meeting</span>
+      </a>
+    </li>
+    <li class="sidenav-item">
+      <a href="" class="sidenav-link">
+        <span>Announcements</span>
+      </a>
+    </li>
+    <li class="sidenav-item">
+      <a href="" class="sidenav-link">
+        <span>Settings</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="overlay" [ngClass]="{ 'active': isSidenavVisible }" (click)="toggleSidenav()"></div>
+
+<main>
+  <button 
+class="btn btn-primary" 
+(click)="toggleSidenav()"
+id="side-toggle"
+>
+  <i class="fas fa-bars"></i>
+</button>
+
 <div class="container" id="team">
     <div class="row d-flex align-items-center justify-content-center">
       <div class="card mb-3" id="bio">
@@ -17,7 +60,7 @@
     </div>
   </div>
 
-  <div class="container" id="members">
+<div class="container" id="members">
     <div class="row mb-3" >
         <div *ngFor="let card of cards.slice(0, 7)" class="col-md-6" [@fadeInOut]>
                 <div id="position">
@@ -28,6 +71,8 @@
               <student-card [card]="card"></student-card>
         </div>
     </div>
-  </div>
+</div>
   
   
+
+</main>
