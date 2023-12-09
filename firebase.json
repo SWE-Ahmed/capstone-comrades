@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "capstone-comrades",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
