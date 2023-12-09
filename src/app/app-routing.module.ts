@@ -8,6 +8,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ShowRequestsComponent } from './show-requests/show-requests.component';
 import { RequestFormComponent } from './request-form/request-form.component';
 import { PastProjectsViewComponent } from './past-projects-view/past-projects-view.component';
+import { ProjectPageComponent } from './project-page/project-page.component';
 
 const routes: Routes = [
   {'path':'home-view', 'component':HomeComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {'path': 'profile', 'component': EditProfileComponent},
   {'path': 'show-requests', 'component': ShowRequestsComponent},
   {'path': 'request-form','component': RequestFormComponent},
-  {'path':'pastProjects','component':PastProjectsViewComponent}
+  {'path':'pastProjects','component':PastProjectsViewComponent},
+  {'path':'project-page','component':ProjectPageComponent}
 ];
 
 @NgModule({

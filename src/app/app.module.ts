@@ -29,6 +29,7 @@ import { PopUpComponent } from './pop-up/pop-up.component';
 import { RequestFormComponent } from './request-form/request-form.component';
 import { PastProjectsViewComponent } from './past-projects-view/past-projects-view.component';
 import { PastProjectCardComponent } from './past-projects-view/past-project-card/past-project-card.component';
+import { ProjectPageComponent } from './project-page/project-page.component';
 
 //routes
 const routes: Routes = [
@@ -61,7 +62,8 @@ const routes: Routes = [
     PopUpComponent,
     RequestFormComponent,
     PastProjectsViewComponent,
-    PastProjectCardComponent
+    PastProjectCardComponent,
+    ProjectPageComponent
   ],
   imports: [
     HttpClientModule,

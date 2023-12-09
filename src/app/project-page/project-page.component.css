@@ -1,0 +1,51 @@
+#title {
+    color: #EAEDF2;
+    font-family: Inter;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#titlepicture {
+    padding: 0;
+    width: 533px;
+    height: 308px;
+    border-radius: 5px 0px 0px 5px;
+    border: 3px solid #3A3F45;
+}
+
+#heading {
+    color: #EAEDF2;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.text {
+    border-radius: 0px 5px 5px 0px;
+    border: 3px solid #3A3F45;
+    background: #212529;
+
+    color: #9FA2A8;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.small-pic {
+    width: 303px;
+    height: 189px;
+    flex-shrink: 0;
+
+    border-radius: 5px 0px 0px 5px;
+    border: 3px solid #3A3F45; 
+}
+
+.row {
+    margin-bottom: 35px;
+}
