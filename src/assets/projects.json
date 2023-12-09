@@ -1,22 +1,182 @@
 [
-    {"name": "apple", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "banana", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "cherry", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "date", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "grape", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "kiwi", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "lemon", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "mango", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "orange", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "pear", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "quince", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "raspberry", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "strawberry", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "tomato", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "watermelon", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "blueberry", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "blackberry", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "pineapple", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "peach", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"},
-    {"name": "plum", "imageSrc": "xgorve.png", "link": "pastprojects/xgorve"}
-]
+    {
+      "id": 1,
+      "name": "Tech Titans",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: No Mentor | Leader: Ahmed Almohammed | Members: Ali Alqutayfi, Daniel Alsadiq, Abdulmohseen AlAli, Hassan Alsyahah",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is a tech titans group dedicated to advancing technology and innovation.",
+      "about": "Welcome to Tech Titans! We're a team of developers, designers, and project managers passionate about creating a seamless platform for students to connect and form teams for their final year projects. Our goal is to simplify the team formation process, so students can focus on their projects and achieve academic success."
+    },
+    {
+      "id": 2,
+      "name": "Project 2",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is an example project.",
+      "about": "This is a brief description of Project 2."
+    },
+    {
+      "id": 3,
+      "name": "Project 3",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is another example project.",
+      "about": "This is a brief description of Project 3."
+    },
+    {
+      "id": 4,
+      "name": "Project 4",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is yet another example project.",
+      "about": "This is a brief description of Project 4."
+    },
+    {
+      "id": 5,
+      "name": "Project 5",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is a fifth example project.",
+      "about": "This is a brief description of Project 5."
+    },
+    {
+      "id": 6,
+      "name": "Project 6",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is the sixth example project.",
+      "about": "This is a brief description of Project 6."
+    },
+    {
+      "id": 7,
+      "name": "Project 7",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is the seventh example project.",
+      "about": "This is a brief description of Project 7."
+    },
+    {
+      "id": 8,
+      "name": "Project 8",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is the eighth example project.",
+      "about": "This is a brief description of Project 8."
+    },
+    {
+      "id": 9,
+      "name": "Project 9",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is the ninth example project.",
+      "about": "This is a brief description of Project 9."
+    },
+    {
+      "id": 10,
+      "name": "Project 10",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is the tenth example project.",
+      "about": "This is a brief description of Project 10."
+    },
+    {
+      "id": 11,
+      "name": "Project 11",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is the eleventh example project.",
+      "about": "This is a brief description of Project 11."
+    },
+    {
+      "id": 12,
+      "name": "Project 12",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is the twelfth example project.",
+      "about": "This is a brief description of Project 12."
+    },
+    {
+      "id": 13,
+      "name": "Project 13",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is the thirteenth example project.",
+      "about": "This is a brief description of Project 13."
+    },
+    {
+      "id": 14,
+      "name": "Project 14",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is the fourteenth example project.",
+      "about": "This is a brief description of Project 14."
+    },
+    {
+      "id": 15,
+      "name": "Project 15",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is the fifteenth example project.",
+      "about": "This is a brief description of Project 15."
+    },
+    {
+      "id": 16,
+      "name": "Project 16",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is the sixteenth example project.",
+      "about": "This is a brief description of Project 16."
+    },
+    {
+      "id": 17,
+      "name": "Project 17",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is the seventeenth example project.",
+      "about": "This is a brief description of Project 17."
+    },
+    {
+      "id": 18,
+      "name": "Project 18",
+      "titlePicture": "tech-titans.png",
+      "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+      "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+      "extraInformation": "This is the eighteenth example project.",
+      "about": "This is a brief description of Project 18."
+    },
+    {
+        "id": 19,
+        "name": "Project 18",
+        "titlePicture": "tech-titans.png",
+        "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+        "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+        "extraInformation": "This is the eighteenth example project.",
+        "about": "This is a brief description of Project 18."
+      },
+      {
+        "id": 20,
+        "name": "Project 18",
+        "titlePicture": "tech-titans.png",
+        "members": "Mentor: Mentor Name | Leader: Leader Name | Members: Member1, Member2, Member3",
+        "pictures": ["tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png", "tech-titans.png"],
+        "extraInformation": "This is the eighteenth example project.",
+        "about": "This is a brief description of Project 18."
+      }
+    ]

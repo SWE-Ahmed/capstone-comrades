@@ -18,8 +18,8 @@ const routes: Routes = [
   {'path': 'profile', 'component': EditProfileComponent},
   {'path': 'show-requests', 'component': ShowRequestsComponent},
   {'path': 'request-form','component': RequestFormComponent},
-  {'path':'pastProjects','component':PastProjectsViewComponent},
-  {'path':'project-page','component':ProjectPageComponent}
+  {'path':'projects','component':PastProjectsViewComponent},
+  {'path':'projects/:projectId','component':ProjectPageComponent}
 ];
 
 @NgModule({
