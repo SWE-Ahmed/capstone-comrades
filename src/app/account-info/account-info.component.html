@@ -1,5 +1,18 @@
 <div class="container">
-  <img src="../assets/user-green.png" alt="accountImg" />
+  <img
+    class="img-profile"
+    [src]="profileImageUrl"
+    alt="accountImg"
+    (click)="onImageClick()"
+  />
+
+  <input
+    type="file"
+    id="profileImage"
+    accept="image/*"
+    (change)="onImageSelected($event)"
+    style="display: none"
+  />
 
   <label id="name">Hassan Alsayhah</label>
 
