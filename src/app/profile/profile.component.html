@@ -1,92 +1,134 @@
 <h2>Profile</h2>
 <div class="wrapper">
-  <section class="personal-wrapper">
-    <!-- Name -->
+  <!-- Name and Major -->
+  <section class="field-wrapper-horizintal">
+    <!-- First Name -->
     <div class="field-wrapper">
-      <label for="name" class="form-label">Name</label>
+      <label for="firstName" class="form-label">First Name</label>
       <input
-        id="name"
+        id="firstName"
         type="text"
         maxlength="30"
         class="form-control"
-        disabled="true"
-        value="Hassan alsayhah"
+        disabled
+        value="Hassan"
       />
-      <img src="../assets/pen-green.png" class="img" />
     </div>
-
-    <!-- Phone number -->
+    <!-- Last Name -->
     <div class="field-wrapper">
-      <label for="phoneNumber" class="form-label">phone Number</label>
+      <label for="lastName" class="form-label">Last Name</label>
+      <input
+        id="lastName"
+        type="text"
+        maxlength="30"
+        class="form-control"
+        disabled
+        value="alsayhah"
+      />
+    </div>
+    <!-- Major -->
+    <div class="field-wrapper">
+      <label for="majors" class="form-label">Major</label>
+      <input
+        id="major"
+        type="text"
+        maxlength="6"
+        class="form-control"
+        disabled
+        value="SCS"
+      />
+    </div>
+  </section>
+
+  <!-- contact information -->
+  <section class="field-wrapper-horizintal">
+    <!-- Phone -->
+    <div class="field-wrapper">
+      <label for="phoneNumber" class="form-label">Phone Number</label>
       <input
         id="phoneNumber"
         type="text"
-        maxlength="14"
-        class="form-control"
-        disabled="true"
-        value="+996 00 000 000"
+        maxlength="30"
+        class="form-control contact"
+        disabled
+        value="+966 57 635 6393"
       />
-      <img src="../assets/pen-green.png" class="img" />
     </div>
-
-    <!-- Major -->
+    <!-- Email -->
     <div class="field-wrapper">
-      <label for="majors" class="select-label">Major</label>
-      <select name="majors" id="majors">
-        <option value="volvo">SWE</option>
-        <option value="saab">CS</option>
-        <option value="opel">ISE</option>
-        <option value="audi">AME</option>
-      </select>
-    </div>
-  </section>
-
-  <!-- Specalization -->
-  <section class="personal-wrapper">
-    <div class="field-wrapper">
-      <label for="specalization" class="form-label">Specalization</label>
+      <label for="email" class="form-label">Email</label>
       <input
-        id="specalization"
+        id="email"
         type="text"
         maxlength="30"
-        class="form-control"
-        disabled="true"
-        value="AI"
+        class="form-control contact"
+        disabled
+        value="s201967890@kfupm.edu.sa"
       />
     </div>
+  </section>
 
-    <!-- interests -->
+  <!-- Extra Info -->
+  <section class="field-wrapper-horizintal">
+    <!-- Specalization and Skills -->
+    <section class="field-wrapper">
+      <!-- specialization -->
+      <div class="field-wrapper">
+        <label for="specialization" class="form-label">Specialization</label>
+        <input
+          id="specialization"
+          type="text"
+          maxlength="30"
+          class="form-control contact"
+          disabled
+          value="Artificial intelligence"
+        />
+      </div>
+
+      <!-- Skills -->
+      <div class="field-wrapper">
+        <label for="skills" class="form-label">Skills</label>
+        <textarea
+          id="skills"
+          type="text"
+          class="textarea skills"
+          disabled
+          rows="5"
+        >
+  Ok,Something</textarea
+        >
+      </div>
+    </section>
+
+    <!-- About -->
     <div class="field-wrapper">
-      <label for="interest" class="form-label">Interest</label>
-      <textarea
-        id="interest"
-        type="text"
-        class="textarea-interest"
-        disabled="true"
-        rows="6"
-      ></textarea>
-      <img src="../assets/pen-green.png" class="img" />
+      <label for="about" class="form-label">About</label>
+      <textarea id="about" type="text" class="textarea about" disabled rows="7">
+  This is about section</textarea
+      >
     </div>
   </section>
-</div>
-<div class="container">
-  <!-- bio -->
-  <div class="field-wrapper">
-    <label for="bio" class="form-label">bio</label>
-    <textarea
-      id="bio"
-      type="text"
-      class="textarea-bio"
-      disabled="true"
-      rows="5"
-    >
-Ok, it is the bio here</textarea
-    >
-    <img src="../assets/pen-green.png" class="img" />
-  </div>
 
-  <div id="btnWrapper">
-    <button type="button" class="btn btn-success">Show Requests</button>
-    <button type="button" class="btn btn-success">Change Password</button>
-  </div>
+  <!-- Links -->
+  <section class="field-wrapper-horizintal">
+    <div class="field-wrapper">
+      <label for="links" class="form-label"
+        >Links (LinkedIn, GitHub, ..etc)</label
+      >
+      <input
+        id="links"
+        type="text"
+        maxlength="30"
+        class="form-control links"
+        disabled
+      />
+    </div>
+  </section>
+
+  <section class="field-wrapper-horizintal">
+    <div id="btnWrapper">
+      <button type="button" class="btn btn-success">Change Password</button>
+      <button type="button" class="btn btn-success">Edit Profile</button>
+    </div>
+  </section>
 </div>

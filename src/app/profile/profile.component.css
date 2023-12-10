@@ -17,14 +17,10 @@ h2 {
 
 .wrapper {
   display: flex;
-  height: fit-content;
-
+  height: 44rem;
+  flex-direction: column;
   justify-content: space-around;
 }
-
-/* input {
-  width: 500px;
-} */
 
 /* For buttons */
 #boxWrapper {
@@ -41,7 +37,7 @@ h2 {
   padding: 0.625rem 0.625rem;
 
   width: 13.6875rem;
-  height: 3.125rem;
+  height: 4.125rem;
 
   color: #dde6ed;
   font-family: Inter;
@@ -90,16 +86,25 @@ h2 {
   width: fit-content;
 }
 
+.field-wrapper-horizintal {
+  display: flex;
+  position: relative;
+  gap: 4px;
+  width: 55.7rem;
+  justify-content: space-around;
+}
+
 .form-control {
-  width: 25.8125rem;
+  width: 18.75rem;
   height: 3.625rem;
   margin-top: 1.5rem;
   padding: 10px;
+  padding-left: 30px;
   flex-shrink: 0;
   fill: #dde6ed;
   border-radius: 50px;
   border: 0 solid white;
-  color: #0f7553;
+  color: #212529;
   font-family: Inter;
   font-size: 2rem;
   font-style: normal;
@@ -107,30 +112,21 @@ h2 {
   line-height: normal;
 }
 
-select {
-  width: 14.25rem;
-  height: 3.625rem;
-  flex-shrink: 0;
-  margin-top: 1.5rem;
-  padding-left: 4.2rem;
-  flex-shrink: 0;
-  fill: #dde6ed;
-  border-radius: 40px;
-  border: 0 solid white;
-  color: #0f7553;
-  font-family: Inter;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+.contact {
+  width: 26.8rem;
+}
+
+#major {
+  width: 13.25rem;
 }
 
 .form-label {
   position: absolute;
-  width: 8.9375rem;
+  /* width: 8.9375rem; */
+  width: fit-content;
   height: 1.625rem;
   left: 2rem;
-  color: #dde6ed;
+  color: #212529;
   font-family: Inter;
   font-size: 1.25rem;
   font-style: normal;
@@ -146,20 +142,7 @@ select {
   cursor: pointer;
 }
 
-.select-label {
-  position: absolute;
-  width: 8.9375rem;
-  height: 1.625rem;
-  left: 2rem;
-  color: #dde6ed;
-  font-family: Inter;
-  font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.textarea-interest {
+.textarea {
   width: 25.8125rem;
   margin-top: 1.5rem;
   padding: 10px;
@@ -167,30 +150,23 @@ select {
   fill: #dde6ed;
   border-radius: 50px;
   border: 0 solid white;
-  color: #0f7553;
-  font-family: Inter;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  resize: none;
-}
-
-.textarea-bio {
-  width: 52.125rem;
-  height: 12rem;
-  flex-shrink: 0;
-  margin-top: 1.5rem;
-  padding: 20px;
-  flex-shrink: 0;
-  fill: #dde6ed;
-  border-radius: 50px;
-  border: 0 solid white;
-  color: #0f7553;
+  color: #212529;
   font-family: Inter;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   resize: none;
+}
+
+.about {
+  height: 18.3rem;
+}
+
+.skills {
+  height: 13rem;
+}
+
+.links {
+  width: 54rem;
 }
