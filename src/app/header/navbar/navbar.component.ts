@@ -32,7 +32,7 @@ export class NavbarHeaderComponent{
     },
     {
       name: 'Past Projects',
-      path: 'pastprojects',
+      path: 'projects',
     },
     {
       name: 'About Us',
@@ -58,7 +58,7 @@ export class NavbarHeaderComponent{
     },
     {
       name: 'Past Projects',
-      path: 'pastprojects',
+      path: 'projects',
     },
   ];
 }

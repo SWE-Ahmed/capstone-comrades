@@ -10,6 +10,8 @@ import { PastProjectsViewComponent } from './past-projects-view/past-projects-vi
 import { ProjectPageComponent } from './project-page/project-page.component';
 import { authGuard } from './auth.guard';
 import { SignupSubmitComponent } from './signup-submit/signup-submit.component';
+import { StudentViewComponent } from './student-view/student-view.component';
+import { TeamViewComponent } from './team-view/team-view.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,12 +24,32 @@ const routes: Routes = [
     component: EditProfileComponent,
     canActivate: [authGuard],
   },
-  { path: 'signup', component: SignupComponent },
-  { path: 'signup/submit', component: SignupSubmitComponent },
-  { path: 'show-requests', component: ShowRequestsComponent },
-  { path: 'request-form', component: RequestFormComponent },
+  {
+    path: 'signup',
+    component: SignupComponent,
+  },
+  {
+    path: 'signup/submit',
+    component: SignupSubmitComponent,
+  },
+  {
+    path: 'show-requests',
+    component: ShowRequestsComponent,
+  },
+  {
+    path: 'request-form',
+    component: RequestFormComponent,
+  },
   { path: 'projects', component: PastProjectsViewComponent },
   { path: 'projects/:projectId', component: ProjectPageComponent },
+  {
+    path: 'students',
+    component: StudentViewComponent,
+  },
+  {
+    path: 'teams',
+    component: TeamViewComponent,
+  },
 ];
 
 @NgModule({
