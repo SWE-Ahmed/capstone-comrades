@@ -3,13 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
-import { SignupSubmitComponent } from './signup-submit/signup-submit.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ShowRequestsComponent } from './show-requests/show-requests.component';
 import { RequestFormComponent } from './request-form/request-form.component';
 import { PastProjectsViewComponent } from './past-projects-view/past-projects-view.component';
 import { ProjectPageComponent } from './project-page/project-page.component';
 import { authGuard } from './auth.guard';
+import { SignupSubmitComponent } from './signup-submit/signup-submit.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },

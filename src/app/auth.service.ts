@@ -53,7 +53,6 @@ export class AuthService {
     return this.authenticated;
   }
   // create profile document
-  createProfile(): void {
-
+  createProfile(accountDetails: any): void {
   }
 }
