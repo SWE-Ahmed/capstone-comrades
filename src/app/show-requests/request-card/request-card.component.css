@@ -1,0 +1,29 @@
+.col-md-2 {
+    margin: 0;
+    padding: 0;
+    border: 3px solid #3A3F45;
+    width: 205px; 
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #9FA2A8;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#popUp {
+    padding-left: 20px;
+    justify-content: flex-start;
+    border: None;
+}
+
+.btn {
+    margin: 5px;
+}
+

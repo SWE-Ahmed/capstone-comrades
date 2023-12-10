@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "capstone-comrades": {
+      "hosting": {
+        "capstone-comrades": [
+          "capstone-comrades"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "capstone-comrades"
+  }
+}

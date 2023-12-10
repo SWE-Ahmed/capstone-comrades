@@ -1,0 +1,54 @@
+
+<div class="container" id="request-type">
+  <div>
+      <p>
+          Choose Request Type
+      </p>
+  </div>
+
+   <div class="col-md-4">
+    <div class="row justify-content-start" id="change-buttons">
+      <div class="col text-center" (click)="changeStatusFilter('received')">
+        Received
+      </div>
+      <div class="col text-center" (click)="changeStatusFilter('sent')">
+        Sent
+      </div>
+      <div class="col text-center" (click)="changeStatusFilter('All')">
+        All
+      </div>
+    </div>
+   </div>
+</div>
+
+<div class="container" id="requests">
+
+    <div class="row" id="head">
+        <div class="col-md-2 text-center ">
+          Type
+        </div>
+        <div class="col-md-2 text-center ">
+          Date
+        </div>
+        <div class="col-md-2 text-center ">
+          From/To
+        </div>
+        <div class="col-md-2 text-center ">
+          Team
+        </div>
+        <div class="col-md-2 text-center ">
+          Action/Status
+        </div>
+      </div>
+  
+      <div *ngFor="let request of filteredrequests.slice(0, visibleCardCount); let i=index" class="row" [@fadeInOut]>
+        <request-card [request]="request" [modalId]="'pop-up'+ i"></request-card> 
+        <pop-up [info]="request" [type]="'Request'" [modalId]="'pop-up'+i"></pop-up>    
+      </div>      
+
+    <div class="col-md-4 mt-4" *ngIf="showMore">
+      <a (click)="showMoreCards()" >Show more >></a>
+    </div>
+</div>
+
+

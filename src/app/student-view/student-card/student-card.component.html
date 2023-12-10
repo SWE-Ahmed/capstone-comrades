@@ -21,7 +21,7 @@
           <p class="tags">Concentration: </p>
           <p>{{ card.concentration }}</p>
         </div>
-        <a [href]="card.showMoreLink">Show more >></a>
+        <a [attr.href]="'#'+modalId" data-bs-toggle="modal">Show more >></a>
     </div>
   </div>
 </div>

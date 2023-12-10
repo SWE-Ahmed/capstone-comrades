@@ -1,31 +1,3 @@
-<!-- <div class="card m-3 overflow-hidden">
-    <div class="row g-0">
-        <img src="" class="card-img-top" alt="...">
-        <div class="card-body">
-          <div class="card-text"> 
-            <p class="tags">Name: </p>
-            <p>Capstone Comrades</p>
-          </div>
-          <div class="card-text"> 
-            <p class="tags">Current Members Majors: </p>
-            <p>SWE,CS</p>
-          </div>
-          <div class="card-text"> 
-            <p class="tags">Wanted Majors: </p>
-            <p>EE,ISE</p>
-          </div>
-          <div class="card-text"> 
-            <p class="tags">Project Concentration: </p>
-            <p>IOT,Networks</p>
-          </div>
-          <div class="text-center">
-            <a href="">Show more>></a>
-          </div>
-      </div>
-    </div>
-</div> -->
-
-
 <div class="card m-3 overflow-hidden">
   <div class="row g-0">
     <img [src]="card.imageSrc" class="card-img-top" alt="Card Image">
@@ -47,7 +19,7 @@
         <p>{{ card.projectConcentration }}</p>
       </div>
       <div class="text-center">
-        <a [href]="card.showMoreLink">Show more >></a>
+        <a [attr.href]="'#'+modalId" data-bs-toggle="modal">Show more >></a>
       </div>
     </div>
   </div>

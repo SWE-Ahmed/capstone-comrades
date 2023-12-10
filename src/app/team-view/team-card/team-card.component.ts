@@ -8,5 +8,6 @@ import { Component,Input} from '@angular/core';
 })
 export class TeamCardComponent{
   @Input() card: any;
+  @Input() modalId: string='';
 
 }

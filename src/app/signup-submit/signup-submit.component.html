@@ -4,15 +4,16 @@
         <!--Email box-->
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="2020XXXXX@kfupm.edu.sa">
+            <input type="email" class="form-control" #emailValue id="exampleFormControlInput1" placeholder="2020XXXXX@kfupm.edu.sa">
         </div>
         <!--Password box-->
         <div class="mb-3">
             <label for="inputPassword5" class="form-label">Password</label>
-            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+            <input type="password" id="inputPassword5" class="form-control" #passwordValue aria-describedby="passwordHelpBlock">
         </div>
     </div>
     <div id="btnWrapper">
+        <button type="button" class="btn btn-info" (click)="goBack()">Back</button>
         <button type="button" class="btn btn-success" (click)="popup = true">Sign Up</button>
     </div>
 </div>
@@ -21,9 +22,9 @@
 	<div class="popup">
 		<h2>Confirmation Email Sent!</h2>
 		<div class="content">
-            We have sent a confirmation email to S2020XXXXX@kfupm.edu.sa. Please activate 
+            We have sent a confirmation email to S2020XXXXX@kfupm.edu.sa. Please activate
             your account through the link to successfully create your account.
 		</div>
-        <button type="button" class="btn btn-success" (click)="closePopup('home-view')">Ok</button>
+        <button type="button" class="btn btn-success" (click)="closePopup(emailValue.value, passwordValue.value)">Ok</button>
 	</div>
 </div>

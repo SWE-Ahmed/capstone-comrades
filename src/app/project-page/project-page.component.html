@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <p id="title" class="text-center">{{project.name}}</p>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <img [src]="'assets/'+ project.titlePicture" id="titlepicture">
+    </div>
+
+    <div class="row">
+        <p id="heading">Team Members</p>
+        <div class="text">
+            {{project.members}}
+        </div>
+    </div>
+
+    <div class="row">
+        <p id="heading">About</p>
+        <div class="text">
+            {{project.about}}
+        </div>
+    </div>
+
+    <div class="row">
+        <p id="heading">Pictures</p>
+        <div class="col-md-3">
+            <img [src]="'assets/'+project.pictures[0]" alt="" class="small-pic">
+        </div>
+        <div class="col-md-3">
+            <img [src]="'assets/'+project.pictures[1]" alt="" class="small-pic">
+        </div>
+        <div class="col-md-3">
+            <img [src]="'assets/'+project.pictures[2]" alt="" class="small-pic">
+        </div>
+        <div class="col-md-3">
+            <img [src]="'assets/'+project.pictures[3]" alt="" class="small-pic">
+        </div>
+    </div>
+
+
+    <div class="row">
+        <p id="heading">Extra information</p>
+        <div class="text">
+            {{project.extraInformation}}
+        </div>
+    </div>
+
+</div>

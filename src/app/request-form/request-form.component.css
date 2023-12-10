@@ -1,0 +1,62 @@
+.image-container {
+    width: 520px;
+    height: 308px;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 3px solid #3A3F45; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#textField {
+    width: 1035px;
+    height: 308px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 3px solid #3A3F45;
+    background: #212529;
+    color: white;
+    line-height: 1;
+}
+
+.btn {
+    border-radius: 15px;
+    background: #0F7553;
+    width: 198px;
+    height: 97px;
+    flex-shrink: 0;
+
+    color: #EAEDF2;
+    text-align: center;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+p {
+    color: #EAEDF2;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.name {
+    color: #0F7553;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.row {
+    margin-bottom: 35px;
+}

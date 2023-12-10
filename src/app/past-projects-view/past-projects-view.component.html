@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="row mb-3">
+      <div *ngFor="let card of cards.slice(0, visibleCardCount)" class="col-md-3" [@fadeInOut]>
+        <past-project-card [info]="card"></past-project-card>
+      </div>
+    </div>
+    <div class="text-center" *ngIf="showMore">
+      <a (click)="showMoreCards()">Show more >></a>
+    </div>
+</div>

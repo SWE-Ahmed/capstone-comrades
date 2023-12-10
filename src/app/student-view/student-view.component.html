@@ -1,7 +1,8 @@
 <div class="container">
   <div class="row mb-3">
-    <div *ngFor="let card of cards.slice(0, visibleCardCount)" class="col-md-6" [@fadeInOut]>
-      <student-card [card]="card"></student-card>
+    <div *ngFor="let card of cards.slice(0, visibleCardCount); let i=index" class="col-md-6" [@fadeInOut]>
+      <student-card [card]="card" [modalId]="'pop-up'+i"></student-card>
+      <pop-up [info]="card" [type]="'Student'" [modalId]="'pop-up'+i"></pop-up>    
     </div>
   </div>
   <div class="text-center" *ngIf="showMore">

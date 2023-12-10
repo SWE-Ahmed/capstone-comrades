@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-signin',
@@ -7,10 +8,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent {
-  constructor(private router: Router) {
+  constructor(private router: Router, private auth: AuthService) {
   }
 
-  launchProfile(path: string): void {
-    this.router.navigate([path])
+  launchProfile(email: string, password: string): void {
+    this.auth.signIn(email, password)
   }
 }

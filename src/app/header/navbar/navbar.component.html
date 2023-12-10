@@ -1,30 +1,13 @@
 <nav>
   <ul class="navMenu">
-    <li>
+    <li *ngFor='let item of navList'>
       <a
-        routerLink="/home-view"
+        routerLink={{item.path}}
         routerLinkActive="active"
         ariaCurrentWhenActive="page"
-        >Home</a
       >
+      {{item.name}}
+      </a>
     </li>
-    <li>
-      <a
-        routerLink="/signin-view"
-        routerLinkActive="active"
-        ariaCurrentWhenActive="page"
-        >Sign In</a
-      >
-    </li>
-    <li>
-      <a
-        routerLink="/signup-view"
-        routerLinkActive="active"
-        ariaCurrentWhenActive="page"
-        >Sign Up</a
-      >
-    </li>
-    <li>Contact Us</li>
-    <li>About Us</li>
   </ul>
 </nav>

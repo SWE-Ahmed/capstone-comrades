@@ -1,0 +1,87 @@
+[
+    {
+      "type": "sent",
+      "date": "2023-12-01",
+      "name": "John",
+      "team": "TeamA",
+      "status": "accepted"
+    },
+    {
+      "type": "received",
+      "date": "2023-12-02",
+      "name": "Alice",
+      "team": "TeamB",
+      "status": "pending"
+    },
+    {
+      "type": "sent",
+      "date": "2023-12-03",
+      "name": "Bob",
+      "team": "TeamC",
+      "status": "accepted"
+    },
+    {
+      "type": "received",
+      "date": "2023-12-04",
+      "name": "Eva",
+      "team": "TeamA",
+      "status": "rejected"
+    },
+    {
+      "type": "sent",
+      "date": "2023-12-05",
+      "name": "Charlie",
+      "team": "TeamB",
+      "status": "accepted"
+    },
+    {
+      "type": "received",
+      "date": "2023-12-06",
+      "name": "Grace",
+      "team": "TeamC",
+      "status": "pending"
+    },
+    {
+      "type": "sent",
+      "date": "2023-12-07",
+      "name": "David",
+      "team": "TeamA",
+      "status": "accepted"
+    },
+    {
+      "type": "received",
+      "date": "2023-12-08",
+      "name": "Frank",
+      "team": "TeamB",
+      "status": "rejected"
+    },
+    {
+      "type": "sent",
+      "date": "2023-12-09",
+      "name": "Ivy",
+      "team": "TeamC",
+      "status": "accepted"
+    },
+    {
+      "type": "received",
+      "date": "2023-12-02",
+      "name": "Alice",
+      "team": "TeamB",
+      "status": "pending"
+    },
+    {
+      "type": "received",
+      "date": "2023-12-02",
+      "name": "Alice",
+      "team": "TeamB",
+      "status": "pending"
+    },
+    {
+      "type": "received",
+      "date": "2023-12-10",
+      "name": "Harry",
+      "team": "TeamA",
+      "status": "rejected"
+    }
+  ]
+  
