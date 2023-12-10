@@ -1,134 +1,183 @@
 <h2>Profile</h2>
-<div class="wrapper">
-  <!-- Name and Major -->
-  <section class="field-wrapper-horizintal">
-    <!-- First Name -->
-    <div class="field-wrapper">
-      <label for="firstName" class="form-label">First Name</label>
-      <input
-        id="firstName"
-        type="text"
-        maxlength="30"
-        class="form-control"
-        disabled
-        value="Hassan"
-      />
-    </div>
-    <!-- Last Name -->
-    <div class="field-wrapper">
-      <label for="lastName" class="form-label">Last Name</label>
-      <input
-        id="lastName"
-        type="text"
-        maxlength="30"
-        class="form-control"
-        disabled
-        value="alsayhah"
-      />
-    </div>
-    <!-- Major -->
-    <div class="field-wrapper">
-      <label for="majors" class="form-label">Major</label>
-      <input
-        id="major"
-        type="text"
-        maxlength="6"
-        class="form-control"
-        disabled
-        value="SCS"
-      />
-    </div>
-  </section>
-
-  <!-- contact information -->
-  <section class="field-wrapper-horizintal">
-    <!-- Phone -->
-    <div class="field-wrapper">
-      <label for="phoneNumber" class="form-label">Phone Number</label>
-      <input
-        id="phoneNumber"
-        type="text"
-        maxlength="30"
-        class="form-control contact"
-        disabled
-        value="+966 57 635 6393"
-      />
-    </div>
-    <!-- Email -->
-    <div class="field-wrapper">
-      <label for="email" class="form-label">Email</label>
-      <input
-        id="email"
-        type="text"
-        maxlength="30"
-        class="form-control contact"
-        disabled
-        value="s201967890@kfupm.edu.sa"
-      />
-    </div>
-  </section>
-
-  <!-- Extra Info -->
-  <section class="field-wrapper-horizintal">
-    <!-- Specalization and Skills -->
-    <section class="field-wrapper">
-      <!-- specialization -->
+<form method="get" action="" autocomplete="on">
+  <div class="wrapper">
+    <!-- Name and Major -->
+    <section class="field-wrapper-horizintal">
+      <!-- First Name -->
       <div class="field-wrapper">
-        <label for="specialization" class="form-label">Specialization</label>
+        <label for="firstName" class="form-label">First Name</label>
         <input
-          id="specialization"
+          id="firstName"
+          type="text"
+          maxlength="16"
+          class="form-control"
+          [disabled]="!isEditMode"
+          pattern="[A-Za-z]+"
+          title="Please enter only alphabetic characters"
+          value="Hassan"
+        />
+      </div>
+      <!-- Last Name -->
+      <div class="field-wrapper">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input
+          id="lastName"
+          type="text"
+          maxlength="16"
+          class="form-control"
+          [disabled]="!isEditMode"
+          pattern="[A-Za-z]+"
+          title="Please enter only alphabetic characters"
+          value="alsayhah"
+        />
+      </div>
+      <!-- Major -->
+      <div class="field-wrapper">
+        <label for="majors" class="form-label">Major</label>
+        <input
+          id="major"
+          type="text"
+          maxlength="7"
+          class="form-control"
+          [disabled]="!isEditMode"
+          pattern="[A-Za-z]+"
+          title="Please enter academic major's code"
+          value="SCS"
+        />
+      </div>
+    </section>
+
+    <!-- contact information -->
+    <section class="field-wrapper-horizintal">
+      <!-- Phone -->
+      <div class="field-wrapper">
+        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <input
+          id="phoneNumber"
+          type="text"
+          maxlength="15"
+          class="form-control contact"
+          [disabled]="!isEditMode"
+          pattern="\+\d{1,3} \d{1,10}"
+          title="Please enter valid phone number. e.g. +966 000000000"
+          value="+966 576356393"
+        />
+      </div>
+      <!-- Email -->
+      <div class="field-wrapper">
+        <label for="email" class="form-label">Email</label>
+        <input
+          id="email"
           type="text"
           maxlength="30"
           class="form-control contact"
           disabled
-          value="Artificial intelligence"
+          value="s201967890@kfupm.edu.sa"
         />
       </div>
+    </section>
 
-      <!-- Skills -->
-      <div class="field-wrapper">
-        <label for="skills" class="form-label">Skills</label>
-        <textarea
-          id="skills"
-          type="text"
-          class="textarea skills"
-          disabled
-          rows="5"
-        >
+    <!-- Extra Info -->
+    <section class="field-wrapper-horizintal">
+      <!-- Specalization and Skills -->
+      <section class="field-wrapper">
+        <!-- specialization -->
+        <div class="field-wrapper">
+          <label for="specialization" class="form-label">Specialization</label>
+          <input
+            id="specialization"
+            type="text"
+            maxlength="35"
+            class="form-control contact"
+            [disabled]="!isEditMode"
+            value="Artificial intelligence"
+          />
+        </div>
+
+        <!-- Skills -->
+        <div class="field-wrapper">
+          <label for="skills" class="form-label">Skills</label>
+          <textarea
+            id="skills"
+            type="text"
+            class="textarea skills"
+            [disabled]="!isEditMode"
+            rows="5"
+          >
   Ok,Something</textarea
+          >
+        </div>
+      </section>
+
+      <!-- About -->
+      <div class="field-wrapper">
+        <label for="about" class="form-label">About</label>
+        <textarea
+          id="about"
+          type="text"
+          class="textarea about"
+          [disabled]="!isEditMode"
+          rows="7"
+        >
+  This is about section</textarea
         >
       </div>
     </section>
 
-    <!-- About -->
-    <div class="field-wrapper">
-      <label for="about" class="form-label">About</label>
-      <textarea id="about" type="text" class="textarea about" disabled rows="7">
-  This is about section</textarea
-      >
-    </div>
-  </section>
+    <!-- Links -->
+    <section class="field-wrapper-horizintal">
+      <div class="field-wrapper">
+        <label for="links" class="form-label"
+          >Links (LinkedIn, GitHub, ..etc)</label
+        >
+        <input
+          id="links"
+          type="text"
+          class="form-control links"
+          [disabled]="!isEditMode"
+        />
+      </div>
+    </section>
 
-  <!-- Links -->
-  <section class="field-wrapper-horizintal">
-    <div class="field-wrapper">
-      <label for="links" class="form-label"
-        >Links (LinkedIn, GitHub, ..etc)</label
-      >
-      <input
-        id="links"
-        type="text"
-        maxlength="30"
-        class="form-control links"
-        disabled
-      />
-    </div>
-  </section>
-
-  <section class="field-wrapper-horizintal">
-    <div id="btnWrapper">
-      <button type="button" class="btn btn-success">Change Password</button>
-      <button type="button" class="btn btn-success">Edit Profile</button>
-    </div>
-  </section>
-</div>
+    <section class="field-wrapper-horizintal">
+      <div id="btnWrapper">
+        <button
+          id="changePassword"
+          type="button"
+          class="btn btn-success"
+          [hidden]="!showChangePasswordButton"
+          (click)="onChangePassword()"
+        >
+          Change Password
+        </button>
+        <button
+          id="edit"
+          type="button"
+          class="btn btn-success"
+          [hidden]="!showEditButton"
+          (click)="onEdit()"
+        >
+          Edit Profile
+        </button>
+        <button
+          id="cancel"
+          type="button"
+          class="btn btn-success gray"
+          [hidden]="!showCancelButton"
+          (click)="onCancel()"
+        >
+          Cancel
+        </button>
+        <button
+          id="submit"
+          type="submit"
+          class="btn btn-success"
+          [hidden]="!showSubmitButton"
+          (click)="onSubmit()"
+        >
+          Submit
+        </button>
+      </div>
+    </section>
+  </div>
+</form>

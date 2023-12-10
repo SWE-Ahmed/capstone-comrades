@@ -170,3 +170,8 @@ h2 {
 .links {
   width: 54rem;
 }
+
+.gray {
+  background-color: #212529;
+  border: #212529;
+}
