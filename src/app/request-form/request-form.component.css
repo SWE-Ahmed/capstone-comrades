@@ -19,7 +19,7 @@
     border: 3px solid #3A3F45;
     background: #212529;
     color: white;
-    vertical-align: text-top;
+    line-height: 1;
 }
 
 .btn {
