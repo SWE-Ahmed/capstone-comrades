@@ -11,7 +11,7 @@
       "date": "2023-12-02",
       "name": "Alice",
       "team": "TeamB",
-      "status": "rejected"
+      "status": "pending"
     },
     {
       "type": "sent",
@@ -39,7 +39,7 @@
       "date": "2023-12-06",
       "name": "Grace",
       "team": "TeamC",
-      "status": "rejected"
+      "status": "pending"
     },
     {
       "type": "sent",

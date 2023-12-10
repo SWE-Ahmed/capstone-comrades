@@ -20,11 +20,15 @@
         </p>
     </div>
     <div class="col-md-2 text-center">
-        <p>
+        <ng-container *ngIf="request.status === 'pending'; else statusDisplay">
+            <button class="btn btn-success" (click)="updateStatus('accepted')">Accept</button>
+            <button class="btn btn-danger" (click)="updateStatus('rejected')">Reject</button>
+        </ng-container>
+        <ng-template #statusDisplay>
             {{request.status}}
-        </p>
-    </div> 
-    <div class="col-md-2 text-center" id="buttons">
+        </ng-template>
+    </div>    
+    <div class="col-md-2 text-center" id="popUp">
         <a [attr.href]="'#'+modalId" data-bs-toggle="modal">
             <img src="assets/Arrow.png" alt="">
         </a>

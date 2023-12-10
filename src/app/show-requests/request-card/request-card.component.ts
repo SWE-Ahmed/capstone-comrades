@@ -9,4 +9,8 @@ export class RequestCardComponent {
   @Input() request: any;
   @Input() modalId: string ='';
 
+  updateStatus(newStatus: string): void {
+    this.request.status = newStatus;
+  }
+
 }

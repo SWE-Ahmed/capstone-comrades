@@ -17,9 +17,13 @@
     line-height: normal;
 }
 
-#buttons {
+#popUp {
     padding-left: 20px;
     justify-content: flex-start;
     border: None;
+}
+
+.btn {
+    margin: 5px;
 }
 
