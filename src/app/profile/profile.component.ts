@@ -23,9 +23,6 @@ export class ProfileComponent {
 
   onSubmit() {
     // ToDo: Perform submit logic here
-    // For now, just toggling the button visibility
-
-    this.exitEditMode();
   }
 
   onCancel() {
