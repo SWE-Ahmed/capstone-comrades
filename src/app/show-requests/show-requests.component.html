@@ -7,14 +7,14 @@
   </div>
 
    <div class="col-md-4">
-    <div class="row justify-content-start">
-      <div class="col text-center">
+    <div class="row justify-content-start" id="change-buttons">
+      <div class="col text-center" (click)="changeStatusFilter('received')">
         Received
       </div>
-      <div class="col text-center">
+      <div class="col text-center" (click)="changeStatusFilter('sent')">
         Sent
       </div>
-      <div class="col text-center">
+      <div class="col text-center" (click)="changeStatusFilter('All')">
         All
       </div>
     </div>
@@ -41,10 +41,10 @@
         </div>
       </div>
   
-    <div *ngFor="let request of allrequests.slice(0, visibleCardCount); let i=index" class="row" [@fadeInOut]>
-      <request-card [request]="request" [modalId]="'pop-up'+ i" ></request-card> 
-      <pop-up [info]="request" [type]="'Request'" [modalId]="'pop-up'+i"></pop-up>    
-    </div>
+      <div *ngFor="let request of filteredrequests.slice(0, visibleCardCount); let i=index" class="row" [@fadeInOut]>
+        <request-card [request]="request" [modalId]="'pop-up'+ i"></request-card> 
+        <pop-up [info]="request" [type]="'Request'" [modalId]="'pop-up'+i"></pop-up>    
+      </div>      
 
     <div class="col-md-4 mt-4" *ngIf="showMore">
       <a (click)="showMoreCards()" >Show more >></a>

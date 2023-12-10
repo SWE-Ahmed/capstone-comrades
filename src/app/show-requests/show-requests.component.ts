@@ -17,8 +17,10 @@ import { CardService } from '../services/card.service';
 })
 export class ShowRequestsComponent {
   allrequests: any[] = [];
+  filteredrequests: any[] = [];
   visibleCardCount = 6;
   showMore = true; 
+  selectedType: string = 'All';
 
   constructor(private cardService: CardService) {}
 
@@ -26,6 +28,7 @@ export class ShowRequestsComponent {
   ngOnInit(): void {
     this.cardService.getRequests().subscribe((data) => {
       this.allrequests = data;
+      this.updateFilteredRequests();
       this.updateVisibleCards();
     });
   }
@@ -35,8 +38,28 @@ export class ShowRequestsComponent {
     this.updateVisibleCards();
   }
 
-  private updateVisibleCards() {
-    this.showMore = this.visibleCardCount < this.allrequests.length;
+  changeStatusFilter(type: string) {
+    this.selectedType = type;
+    this.visibleCardCount = 6;
+    this.updateFilteredRequests();
+    this.updateVisibleCards();
   }
 
+
+  private updateFilteredRequests() {
+    if (this.selectedType === 'All') {
+      this.filteredrequests = this.allrequests;
+    } else {
+      this.filteredrequests = this.allrequests.filter(
+        (request) => request.type === this.selectedType
+      );
+    }
+  }
+  private updateVisibleCards() {
+    if (this.selectedType === 'All') {
+      this.showMore = this.visibleCardCount < this.allrequests.length;
+    } else {
+      this.showMore = this.visibleCardCount < this.filteredrequests.length;
+    }
+  }
 }

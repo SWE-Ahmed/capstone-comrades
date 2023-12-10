@@ -58,3 +58,8 @@ div a:hover {
     font-weight: 700;
     line-height: normal;
 }
+
+
+#change-buttons {
+    cursor: pointer;
+}
