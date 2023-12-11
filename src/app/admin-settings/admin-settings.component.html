@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row mb-3 d-flex justify-content-center align-items-center">
+      <img src="assets/daniel.png" alt="" id="adminPicture">
+    </div>
+    <div class="row mb-3 d-flex justify-content-center align-items-center">
+        <div class="col-md-6 d-flex justify-content-center">
+          <div class="form-group">
+            <label for="username"><p class="input-label">Username</p></label>
+            <div class="input-container">
+              <input #usernameInput type="text" class="input form-control" id="username" placeholder="name" [readonly]="fieldStates['username']">
+              <i class="fas fa-pencil-alt edit-icon" (click)="toggleEdit('username')"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center">
+          <div class="form-group">
+            <label for="email"><p class="input-label">Email</p></label>
+            <div class="input-container">
+              <input #emailInput type="text" class="input form-control" id="email" placeholder="s20xxxx@kfupm.edu.sa" [readonly]="fieldStates['email']">
+              <i class="fas fa-pencil-alt edit-icon" (click)="toggleEdit('email')"></i>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="row mb-3">
+        <div class="col-md-6 d-flex justify-content-center">
+          <div class="form-group">
+            <label for="password"><p class="input-label">Password</p></label>
+            <div class="input-container">
+              <i *ngIf="showEye" class="fas fa-eye toggle-icon" (click)="togglePasswordVisibility()"></i>
+              <input #passwordInput type="password" class="input form-control" id="password" placeholder="*******" [readonly]="fieldStates['password']">
+              <i class="fas fa-pencil-alt edit-icon" (click)="toggleEdit('password')"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+  

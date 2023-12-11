@@ -53,7 +53,7 @@ const routes: Routes = [
     component: TeamViewComponent,
   },
   {
-    path: 'my-team',
+    path: 'sidebar',
     component: SidebarComponent,
   },
 ];
