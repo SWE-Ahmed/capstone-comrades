@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class StudentCardComponent {
   @Input() card: any;
+  @Input() showKebabMenu: boolean = false;
   @Input() modalId: string ='';
 
 }

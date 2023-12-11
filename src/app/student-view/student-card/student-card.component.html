@@ -1,27 +1,42 @@
-<div class="card mb-3 overflow-hidden align-items-stretch">
+<div class="card mb-3 position-relative">
   <div class="row g-0">
-    <div class="col-md-4">
-      <!-- <img [src]="'assets/'+ card.imageSrc" class="img-fluid rounded-start" alt="..."> -->
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <div class="card-text"> 
-          <p class="tags">Name: </p>
-          <p>{{ card.name }}</p>
-        </div>
-        <div class="card-text"> 
-          <p class="tags">KFUPM ID: </p>
-          <p>{{ card.kfupmId }}</p>
-        </div>
-        <div class="card-text"> 
-          <p class="tags">Major: </p>
-          <p>{{ card.major }}</p>
-        </div>
-        <div class="card-text"> 
-          <p class="tags">Concentration: </p>
-          <p>{{ card.concentration }}</p>
-        </div>
-        <a [attr.href]="'#'+modalId" data-bs-toggle="modal">Show more >></a>
-    </div>
+      <div class="col-md-4">
+          <!-- <img [src]="'assets/'+ card.imageSrc" class="img-fluid rounded-start" alt="..."> -->
+      </div>
+      <div class="col-md-8">
+          <div class="card-body">
+              <!-- Kebab Menu Overlay -->
+              <div *ngIf="showKebabMenu" class="position-absolute top-0 end-0">
+                  <div class="dropdown">
+                      <button class="btn btn-link text-dark dropdown-toggle" type="button" id="kebabMenu" data-toggle="dropdown-menu" aria-haspopup="true" aria-expanded="false">
+                          <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="kebabMenu">
+                          <a class="dropdown-item" href="#">Option 1</a>
+                          <a class="dropdown-item" href="#">Option 2</a>
+                          <a class="dropdown-item" href="#">Option 3</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Card Content -->
+              <div class="card-text">
+                  <p class="tags">Name: </p>
+                  <p>{{ card.name }}</p>
+              </div>
+              <div class="card-text">
+                  <p class="tags">KFUPM ID: </p>
+                  <p>{{ card.kfupmId }}</p>
+              </div>
+              <div class="card-text">
+                  <p class="tags">Major: </p>
+                  <p>{{ card.major }}</p>
+              </div>
+              <div class="card-text">
+                  <p class="tags">Concentration: </p>
+                  <p>{{ card.concentration }}</p>
+              </div>
+              <a [attr.href]="'#'+modalId" data-bs-toggle="modal">Show more >></a>
+          </div>
+      </div>
   </div>
 </div>

@@ -32,6 +32,8 @@ import { ProjectPageComponent } from './project-page/project-page.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from '../environments/environment';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { MyTeamComponent } from './my-team/my-team.component';
 
 
 @NgModule({
@@ -59,7 +61,9 @@ import { environment } from '../environments/environment';
     RequestFormComponent,
     PastProjectsViewComponent,
     PastProjectCardComponent,
-    ProjectPageComponent
+    ProjectPageComponent,
+    SidebarComponent,
+    MyTeamComponent
   ],
   imports: [
     HttpClientModule,
