@@ -194,3 +194,46 @@ select {
   line-height: normal;
   resize: none;
 }
+
+.modal-content {
+  background-color: #9FA2A8;
+}
+
+.modal-input {
+  margin:0;
+  background: #DDE6ED; 
+}
+
+.input-label {
+  margin: 0;
+}
+
+#modal-title {
+  color: #0F7553;
+  text-align: center;
+  font-family: Inter;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 722;
+  line-height: normal;
+}
+
+.fa-eye,.fa-eye-slash {
+  scale: 1.5;
+  color:#38a3d7;
+  position: absolute;
+  transform: translateY(80%);
+  cursor: pointer;
+  right: 60px;
+}
+
+#modal-button {
+ width: 170px;
+}
+
+.rounded-circle {
+  height: 32px;
+  width: 32px;
+  background-color: #198754;
+  cursor: pointer;
+}

@@ -87,6 +87,57 @@ Ok, it is the bio here</textarea
 
   <div id="btnWrapper">
     <button type="button" class="btn btn-success">Show Requests</button>
-    <button type="button" class="btn btn-success">Change Password</button>
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#passwordModal">Change Password</button>
   </div>
 </div>
+
+
+<div class="modal" tabindex="-1" id="passwordModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container">
+          <div class="row mb-3">
+            <p id="modal-title"> Change Password</p>
+          </div>
+          <div class="row mb-3">
+            <div class="form-group">
+              <label for="oldpass"><p class="input-label">Old Password</p></label>
+              <input type="password" class="modal-input form-control" id="oldpass">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="form-group">
+              <label for="newpass"><p class="input-label">New Password</p></label>
+              <div class="input-container">
+                <i *ngIf="!showEyeNewPass" class="fa-solid fa-eye-slash" (click)="togglePasswordVisibility('newpass')"></i>
+                <i *ngIf="showEyeNewPass" class="fa-solid fa-eye" (click)="togglePasswordVisibility('newpass')"></i>
+                <input #newpass type="password" class="modal-input form-control" id="newpass">
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="form-group">
+              <label for="confirmPass"><p class="input-label">Confirm Password</p></label>
+              <div class="input-container">
+                <i *ngIf="!showEyeConfirmPass" class="fa-solid fa-eye-slash" (click)="togglePasswordVisibility('confirmPass')"></i>
+                <i *ngIf="showEyeConfirmPass" class="fa-solid fa-eye" (click)="togglePasswordVisibility('confirmPass')"></i>
+                <input #confirmPass type="password" class="modal-input form-control" id="confirmPass">
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <button type="button" class="btn btn-success" id="modal-button" data-bs-dismiss="modal">Submit</button>
+          </div>
+          <div class="row mb-3 d-flex align-items-center" >
+            <div class="rounded-circle d-flex align-items-center justify-content-center" data-bs-dismiss="modal">
+            <i class="fa-solid fa-reply"></i>
+            </div>  
+            <p class="">Back to profile</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
