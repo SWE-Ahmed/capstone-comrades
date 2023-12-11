@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
 import { CardService } from '../services/card.service';
 import { trigger, transition, style, animate } from '@angular/animations';
 
@@ -15,17 +15,53 @@ import { trigger, transition, style, animate } from '@angular/animations';
     ]),
   ],
 })
-export class MyTeamComponent {
-  cards: any[] = [];
+export class MyTeamComponent implements AfterViewInit,OnInit{
   @Input() showKebabMenu:boolean = true;
-  visibleCardCount = 6;
-  showMore = true;
+  @Input() teamExist:boolean=true;
 
-  constructor(private cardService: CardService) {}
+  constructor(private cardService: CardService,private renderer: Renderer2, private el: ElementRef) {}
+
+  cards: any[] = [];
+  visibleCardCount = 6;
 
   ngOnInit(): void {
     this.cardService.getStudentCards().subscribe((data) => {
       this.cards = data;
     });
   } 
+
+  fileInput: HTMLInputElement | undefined;
+  selectedImage: string | ArrayBuffer | null = null;
+  name: any;
+  textFieldValue: string = '';
+
+  ngAfterViewInit(): void {
+    this.fileInput = this.renderer.selectRootElement('#imageInput');
+    console.log(this.fileInput);
+
+  }
+  openFileInput(): void {
+    if(this.fileInput) {
+      this.fileInput.click();
+    }
+  }
+
+
+  onImageSelected(event: any): void {
+    if (event && event.target && event.target.files) {
+      const file = event.target.files[0];
+  
+      if (file) {
+        const reader = new FileReader();
+  
+        reader.onload = (e) => {
+          if (e && e.target) {
+            this.selectedImage = e.target.result as string;
+          }
+        };
+  
+        reader.readAsDataURL(file);
+      }
+    }
+  }  
 }
