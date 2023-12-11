@@ -33,6 +33,9 @@ import { environment } from '../environments/environment';
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getAuth, provideAuth } from '@angular/fire/auth';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { MyTeamComponent } from './my-team/my-team.component';
+
 
 @NgModule({
   declarations: [
@@ -59,7 +62,9 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
     RequestFormComponent,
     PastProjectsViewComponent,
     PastProjectCardComponent,
-    ProjectPageComponent
+    ProjectPageComponent,
+    SidebarComponent,
+    MyTeamComponent
   ],
   imports: [
     HttpClientModule,

@@ -1,0 +1,39 @@
+.card {
+    background: #212529;
+    border: 3px solid #3A3F45;
+    border-radius: 0px 5px 5px 0px;
+    height: 250px;
+    width: 950px;
+    
+}
+
+p {
+    color: #9FA2A8;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#members .col-md-6 {
+    margin-bottom: 50px;
+}
+
+#members #position {
+    color: #9FA2A8;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.container {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+i {
+    color: #EAEDF2 ;
+}

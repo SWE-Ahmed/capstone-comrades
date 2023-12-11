@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row mb-3 d-flex align-items-center justify-content-center">
+        <div class="card">
+            <div class="row g-0">
+                <div class="col" id="teamPicture">
+                    <img src="assets/tech-titans.png" alt="" class="img-fluid rounded-start" width="342px" height="250px">
+                </div>
+                <div class="col">
+                    <div class="card-body">
+                    <!-- Kebab Menu Overlay -->
+                    <div *ngIf="showKebabMenu" class="position-absolute top-0 end-0">
+                        <div class="dropdown">
+                            <button class="btn btn-link text-dark dropdown-toggle" type="button" id="kebabMenu" data-toggle="dropdown-menu" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="kebabMenu">
+                                <a class="dropdown-item" href="#">Option 1</a>
+                                <a class="dropdown-item" href="#">Option 2</a>
+                                <a class="dropdown-item" href="#">Option 3</a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi quos fugit corporis, reprehenderit soluta facilis veritatis suscipit ab consequuntur, perferendis rerum placeat. Dolor nisi odit iusto unde consequuntur cupiditate alias?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3" id="members" >
+        <div *ngFor="let card of cards.slice(0, 7)" class="col-md-6" [@fadeInOut]>
+                <div id="position">
+                    <p>
+                        Member
+                    </p>
+                </div>
+              <student-card [card]="card" [showKebabMenu]="true"></student-card>
+        </div>
+    </div>
+</div>
