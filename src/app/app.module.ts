@@ -36,6 +36,8 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MyTeamComponent } from './my-team/my-team.component';
 import { AdminSettingsComponent } from './admin-settings/admin-settings.component';
+import { SidebarContentComponent } from './sidebar/sidebar-content/sidebar-content.component';
+import { SidebaritemComponent } from './sidebar/sidebaritem/sidebaritem.component';
 
 
 @NgModule({
@@ -66,7 +68,9 @@ import { AdminSettingsComponent } from './admin-settings/admin-settings.componen
     ProjectPageComponent,
     SidebarComponent,
     MyTeamComponent,
-    AdminSettingsComponent
+    AdminSettingsComponent,
+    SidebarContentComponent,
+    SidebaritemComponent
   ],
   imports: [
     HttpClientModule,
