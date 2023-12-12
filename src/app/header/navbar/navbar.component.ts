@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, OnInit, inject } from '@angular/core';
 import { AuthService } from 'src/app/auth.service';
 import { ChangeDetectorRef } from '@angular/core';
+import { DataService } from 'src/app/data.service';
+import { PopulateService } from 'src/app/populate.service';
 
 @Component({
   selector: 'navbarheader',
@@ -8,15 +10,35 @@ import { ChangeDetectorRef } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarHeaderComponent{
-  constructor( private cdref: ChangeDetectorRef ) {}   
+  constructor(
+    private cdref: ChangeDetectorRef,
+    private data: DataService,
+    private popul8: PopulateService,
+    private auth: AuthService) {}
 
   ngAfterContentChecked() {
-    this.navList = this.auth.isAuthenticated() ? this.navIn : this.navOut;
+    const currentUser = this.auth.getCurrentUser();
+  
+    if (this.auth.isAuthenticated() && currentUser !== null && currentUser !== undefined) {
+      const userName = currentUser.name;
+      
+      if (userName !== null && userName !== undefined) {
+        console.log('User Name:', userName);
+        this.navIn[1].name = JSON.parse(JSON.stringify(userName)).firstName;
+        this.navList = this.navIn;
+      } else {
+        console.warn('User name is null or undefined.');
+        // Handle the case when user name is null or undefined
+      }
+    } else {
+      this.navList = this.navOut;
+    }
+  
     this.cdref.detectChanges();
   }
+    
 
-  auth = inject(AuthService);
-  navList: any 
+  navList: any;
   navOut: any = [
     {
       name: 'Home',
@@ -45,7 +67,7 @@ export class NavbarHeaderComponent{
       path: '',
     },
     {
-      name: 'USERNAME',
+      name: '',
       path: 'profile',
     },
     {

@@ -1,0 +1,56 @@
+#adminPicture {
+    width: 216px;
+    height: 216px;
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+.form-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-label {
+    color: #9FA2A8;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+  
+  .input-container {
+    position: relative;
+    width: 300px;
+  }
+  
+  .input {
+    height: 74px;
+    background-color: #DDE6ED;
+    padding-right: 30px;
+    border-radius:40px;
+    border: 3px solid #3A3F45;
+  }
+
+  
+  .edit-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #198754;
+    transition: scale 0.3s ease-in;
+  }
+
+  .edit-icon:hover{
+    scale: 150%;
+  }
+  
+  .toggle-icon {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }

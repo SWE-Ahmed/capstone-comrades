@@ -1,0 +1,59 @@
+<div class="wrapper bg-dark">
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <div class="h-100 border-end border-secondary">
+      <div class="sidebar-logo border-bottom border-secondary">
+        <!--This is the sidebar term navigation items below the TERM (toggle)-->
+        <li class="sidebar-item">
+          <a
+            href="#"
+            class="sidebar-link collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#pages1"
+            aria-expanded="false"
+            aria-controls="pages1"
+          >
+            Term
+          </a>
+          <ul
+            id="pages1"
+            class="sidebar-dropdown list-unstyled collapse"
+            data-bs-parent="#sidebar"
+          >
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">232</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">231</a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">222</a>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <!-- Sidebar Navigation -->
+      <!--Sidebar navigation items below the TERM-->
+      <ul class="sidebar-nav">
+        <li
+          class="sidebar-item border-bottom border-secondary"
+          *ngFor="let item of defaultSideBar"
+        >
+          <a
+            class="sidebar-link"
+            routerLink="{{ item.path }}"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+          >
+            {{ item.name }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <!-- Main Component -->
+  <!-- <app-sidebar-content
+    (sidebarParentUpdate)="getSidebarUpdate()"
+  ></app-sidebar-content> -->
+  <router-outlet></router-outlet>
+</div>

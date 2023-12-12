@@ -41,5 +41,5 @@
     </form>
   </div>
 <!--Signup submit form-->
-<app-signup-submit [showFirstToggle]="params.showFirst" *ngIf="!params.showFirst" (updateView)="updateView($event)"></app-signup-submit>
+<app-signup-submit [params]="params" *ngIf="!params.showFirst" (updateView)="updateView($event)"></app-signup-submit>
 

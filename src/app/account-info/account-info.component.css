@@ -7,10 +7,10 @@
   width: fit-content;
   gap: 2rem;
 }
-
+ 
 label {
   width: 20rem;
-  color: #0f7553;
+  color: #212529;
   text-align: center;
   font-family: Inter;
   font-size: 1.5rem;
@@ -18,9 +18,16 @@ label {
   font-weight: 500;
   line-height: normal;
 }
-
-img {
+ 
+b {
+  font-weight: 700;
+}
+ 
+.img-profile {
   width: 13.5rem;
   height: 13.5rem;
   flex-shrink: 0;
+  cursor: pointer;
+  border-radius: 50%;
 }
+ 
