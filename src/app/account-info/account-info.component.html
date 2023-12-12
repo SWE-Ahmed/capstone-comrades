@@ -1,11 +1,24 @@
 <div class="container">
-  <img src="../assets/user-green.png" alt="accountImg" />
-
+  <img
+    class="img-profile"
+    [src]="profileImageUrl"
+    alt="accountImg"
+    (click)="onImageClick()"
+  />
+ 
+  <input
+    type="file"
+    id="profileImage"
+    accept="image/*"
+    (change)="onImageSelected($event)"
+    style="display: none"
+  />
+ 
   <label id="name">Hassan Alsayhah</label>
-
-  <label id="team">Team Name: Capstone Comrads</label>
-
-  <label id="email">s201967890@kfupm.edu.sa</label>
-
+ 
+  <label id="team"><b>Team Name: </b><br />Capstone Comrads</label>
+ 
+  <label id="email">s201967890&#64;kfupm.edu.sa</label>
+ 
   <label id="id">ID: 201967890</label>
 </div>

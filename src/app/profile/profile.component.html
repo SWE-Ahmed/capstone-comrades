@@ -1,92 +1,281 @@
 <h2>Profile</h2>
-<div class="wrapper">
-  <section class="personal-wrapper">
-    <!-- Name -->
-    <div class="field-wrapper">
-      <label for="name" class="form-label">Name</label>
-      <input
-        id="name"
-        type="text"
-        maxlength="30"
-        class="form-control"
-        disabled="true"
-        value="Hassan alsayhah"
-      />
-      <img src="../assets/pen-green.png" class="img" />
-    </div>
+<form method="get" action="" autocomplete="on">
+  <div class="wrapper">
+    <!-- Name and Major -->
+    <section class="field-wrapper-horizintal">
+      <!-- First Name -->
+      <div class="field-wrapper">
+        <label for="firstName" class="form-label">First Name</label>
+        <input
+          id="firstName"
+          type="text"
+          maxlength="16"
+          class="form-control"
+          [disabled]="!isEditMode"
+          pattern="[A-Za-z]+"
+          title="Please enter only alphabetic characters"
+          value="Hassan"
+        />
+      </div>
+      <!-- Last Name -->
+      <div class="field-wrapper">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input
+          id="lastName"
+          type="text"
+          maxlength="16"
+          class="form-control"
+          [disabled]="!isEditMode"
+          pattern="[A-Za-z]+"
+          title="Please enter only alphabetic characters"
+          value="alsayhah"
+        />
+      </div>
+      <!-- Major -->
+      <div class="field-wrapper">
+        <label for="majors" class="form-label">Major</label>
+        <input
+          id="major"
+          type="text"
+          maxlength="7"
+          class="form-control"
+          [disabled]="!isEditMode"
+          pattern="[A-Za-z]+"
+          title="Please enter academic major's code"
+          value="SCS"
+        />
+      </div>
+    </section>
 
-    <!-- Phone number -->
-    <div class="field-wrapper">
-      <label for="phoneNumber" class="form-label">phone Number</label>
-      <input
-        id="phoneNumber"
-        type="text"
-        maxlength="14"
-        class="form-control"
-        disabled="true"
-        value="+996 00 000 000"
-      />
-      <img src="../assets/pen-green.png" class="img" />
-    </div>
+    <!-- contact information -->
+    <section class="field-wrapper-horizintal">
+      <!-- Phone -->
+      <div class="field-wrapper">
+        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <input
+          id="phoneNumber"
+          type="text"
+          maxlength="15"
+          class="form-control contact"
+          [disabled]="!isEditMode"
+          pattern="\+\d{1,3} \d{1,10}"
+          title="Please enter valid phone number. e.g. +966 000000000"
+          value="+966 576356393"
+        />
+      </div>
+      <!-- Email -->
+      <div class="field-wrapper">
+        <label for="email" class="form-label">Email</label>
+        <input
+          id="email"
+          type="text"
+          maxlength="30"
+          class="form-control contact"
+          disabled
+          value="s201967890@kfupm.edu.sa"
+        />
+      </div>
+    </section>
 
-    <!-- Major -->
-    <div class="field-wrapper">
-      <label for="majors" class="select-label">Major</label>
-      <select name="majors" id="majors">
-        <option value="volvo">SWE</option>
-        <option value="saab">CS</option>
-        <option value="opel">ISE</option>
-        <option value="audi">AME</option>
-      </select>
-    </div>
-  </section>
+    <!-- Extra Info -->
+    <section class="field-wrapper-horizintal">
+      <!-- Specalization and Skills -->
+      <section class="field-wrapper">
+        <!-- specialization -->
+        <div class="field-wrapper">
+          <label for="specialization" class="form-label">Specialization</label>
+          <input
+            id="specialization"
+            type="text"
+            maxlength="35"
+            class="form-control contact"
+            [disabled]="!isEditMode"
+            pattern="[A-Za-z ]+"
+            value="Artificial intelligence"
+          />
+        </div>
 
-  <!-- Specalization -->
-  <section class="personal-wrapper">
-    <div class="field-wrapper">
-      <label for="specalization" class="form-label">Specalization</label>
-      <input
-        id="specalization"
-        type="text"
-        maxlength="30"
-        class="form-control"
-        disabled="true"
-        value="AI"
-      />
-    </div>
+        <!-- Skills -->
+        <div class="field-wrapper">
+          <label for="skills" class="form-label">Skills</label>
+          <textarea
+            id="skills"
+            type="text"
+            class="textarea skills"
+            [disabled]="!isEditMode"
+            rows="5"
+          >
+  Ok,Something</textarea
+          >
+        </div>
+      </section>
 
-    <!-- interests -->
-    <div class="field-wrapper">
-      <label for="interest" class="form-label">Interest</label>
-      <textarea
-        id="interest"
-        type="text"
-        class="textarea-interest"
-        disabled="true"
-        rows="6"
-      ></textarea>
-      <img src="../assets/pen-green.png" class="img" />
-    </div>
-  </section>
-</div>
-<div class="container">
-  <!-- bio -->
-  <div class="field-wrapper">
-    <label for="bio" class="form-label">bio</label>
-    <textarea
-      id="bio"
-      type="text"
-      class="textarea-bio"
-      disabled="true"
-      rows="5"
-    >
-Ok, it is the bio here</textarea
-    >
-    <img src="../assets/pen-green.png" class="img" />
+      <!-- About -->
+      <div class="field-wrapper">
+        <label for="about" class="form-label">About</label>
+        <textarea
+          id="about"
+          type="text"
+          class="textarea about"
+          [disabled]="!isEditMode"
+          rows="7"
+        >
+  This is about section</textarea
+        >
+      </div>
+    </section>
+
+    <!-- Links -->
+    <section class="field-wrapper-horizintal">
+      <div class="field-wrapper">
+        <label for="links" class="form-label"
+          >Links (LinkedIn, GitHub, ..etc)</label
+        >
+        <input
+          id="links"
+          type="text"
+          class="form-control links"
+          [disabled]="!isEditMode"
+        />
+      </div>
+    </section>
+
+    <section class="field-wrapper-horizintal">
+      <div id="btnWrapper">
+        <button
+          id="changePassword"
+          type="button"
+          class="btn btn-success"
+          data-bs-toggle="modal"
+          [hidden]="!showChangePasswordButton"
+          data-bs-target="#passwordModal"
+          (click)="onChangePassword()"
+        >
+          Change Password
+        </button>
+        <button
+          id="edit"
+          type="button"
+          class="btn btn-success"
+          [hidden]="!showEditButton"
+          (click)="onEdit()"
+        >
+          Edit Profile
+        </button>
+        <button
+          id="cancel"
+          type="button"
+          class="btn btn-success gray"
+          [hidden]="!showCancelButton"
+          (click)="onCancel()"
+        >
+          Cancel
+        </button>
+        <button
+          id="submit"
+          type="submit"
+          class="btn btn-success"
+          [hidden]="!showSubmitButton"
+          (click)="onSubmit()"
+        >
+          Submit
+        </button>
+      </div>
+    </section>
   </div>
+</form>
 
-  <div id="btnWrapper">
-    <button type="button" class="btn btn-success">Show Requests</button>
-    <button type="button" class="btn btn-success" (click)="signOut()">Change Password</button>
+<div class="modal" tabindex="-1" id="passwordModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container">
+          <div class="row mb-3">
+            <p id="modal-title">Change Password</p>
+          </div>
+          <div class="row mb-3">
+            <div class="form-group">
+              <label for="oldpass"
+                ><p class="input-label">Old Password</p></label
+              >
+              <input
+                type="password"
+                class="modal-input form-control"
+                id="oldpass"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="form-group">
+              <label for="newpass"
+                ><p class="input-label">New Password</p></label
+              >
+              <div class="input-container">
+                <i
+                  *ngIf="!showEyeNewPass"
+                  class="fa-solid fa-eye-slash"
+                  (click)="togglePasswordVisibility('newpass')"
+                ></i>
+                <i
+                  *ngIf="showEyeNewPass"
+                  class="fa-solid fa-eye"
+                  (click)="togglePasswordVisibility('newpass')"
+                ></i>
+                <input
+                  #newpass
+                  type="password"
+                  class="modal-input form-control"
+                  id="newpass"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="form-group">
+              <label for="confirmPass"
+                ><p class="input-label">Confirm Password</p></label
+              >
+              <div class="input-container">
+                <i
+                  *ngIf="!showEyeConfirmPass"
+                  class="fa-solid fa-eye-slash"
+                  (click)="togglePasswordVisibility('confirmPass')"
+                ></i>
+                <i
+                  *ngIf="showEyeConfirmPass"
+                  class="fa-solid fa-eye"
+                  (click)="togglePasswordVisibility('confirmPass')"
+                ></i>
+                <input
+                  #confirmPass
+                  type="password"
+                  class="modal-input form-control"
+                  id="confirmPass"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <button
+              type="button"
+              class="btn btn-success"
+              id="modal-button"
+              data-bs-dismiss="modal"
+            >
+              Submit
+            </button>
+          </div>
+          <div class="row mb-3 d-flex align-items-center">
+            <div
+              class="rounded-circle d-flex align-items-center justify-content-center"
+              data-bs-dismiss="modal"
+            >
+              <i class="fa-solid fa-reply"></i>
+            </div>
+            <p class="">Back to profile</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
