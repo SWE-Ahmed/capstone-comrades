@@ -1,94 +1,59 @@
 <div class="wrapper bg-dark">
-    <!-- Sidebar -->
-    <aside id="sidebar">
-        <div class="h-100 border-end border-secondary">
-            <div class="sidebar-logo border-bottom border-secondary">
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#pages1"
-                        aria-expanded="false" aria-controls="pages1">
-                        Term
-                    </a>
-                    <ul id="pages1" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">232</a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">231</a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">222</a>
-                        </li>
-                    </ul>
-                </li>
-            </div>
-            <!-- Sidebar Navigation -->
-            <ul class="sidebar-nav">
-                <li class="sidebar-item border-bottom border-secondary">
-                    <a href="#" class="sidebar-link">
-                        Terms
-                    </a>
-                </li>
-                <li class="sidebar-item border-bottom border-secondary">
-                    <a href="#" class="sidebar-link">
-                        Students
-                    </a>
-                </li>
-                <li class="sidebar-item border-bottom border-secondary">
-                    <a href="#" class="sidebar-link">
-                        Mentors
-                    </a>
-                </li>
-                <li class="sidebar-item border-bottom border-secondary">
-                    <a href="#" class="sidebar-link">
-                        Timeline
-                    </a>
-                </li>
-                <li class="sidebar-item border-bottom border-secondary">
-                    <a href="#" class="sidebar-link">
-                        Announcements
-                    </a>
-                </li>
-                <li class="sidebar-item border-bottom border-secondary">
-                    <a href="#" class="sidebar-link">
-                        Reports
-                    </a>
-                </li>
-                <li class="sidebar-item border-bottom border-secondary">
-                    <a href="#" class="sidebar-link">
-                        Term Settings
-                    </a>
-                </li>
-                
-                <!-- <li class="sidebar-header">
-                    Multi Level Nav
-                </li> -->
-            </ul>
-        </div>
-    </aside>
-    <!-- Main Component -->
-    <div class="main">
-        <nav class="navbar navbar-expand px-3 border-bottom border-secondary">
-            <!-- Button for sidebar tggle -->
-            <li class="nav-item col-4">
-                <button class="btn" type="button" data-bs-theme="dark" (click)="toggleSidebar()">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <div class="h-100 border-end border-secondary">
+      <div class="sidebar-logo border-bottom border-secondary">
+        <!--This is the sidebar term navigation items below the TERM (toggle)-->
+        <li class="sidebar-item">
+          <a
+            href="#"
+            class="sidebar-link collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#pages1"
+            aria-expanded="false"
+            aria-controls="pages1"
+          >
+            Term
+          </a>
+          <ul
+            id="pages1"
+            class="sidebar-dropdown list-unstyled collapse"
+            data-bs-parent="#sidebar"
+          >
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">232</a>
             </li>
-            <li class="nav-item pt-2 justify-content-center col-4">
-                <!-- <h3>Capstone Comrades</h3> -->
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">231</a>
             </li>
-            <li class="nav-item col-4">
-                <!-- hello its me -->
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link">222</a>
             </li>
-            
-            
-        </nav>
-        <main class="content px-3 py-2">
-            <div class="container-fluid">
-                <div class="mb-3">
-                    <app-admin-settings></app-admin-settings>
-                </div>
-            </div>
-        </main>
+          </ul>
+        </li>
+      </div>
+      <!-- Sidebar Navigation -->
+      <!--Sidebar navigation items below the TERM-->
+      <ul class="sidebar-nav">
+        <li
+          class="sidebar-item border-bottom border-secondary"
+          *ngFor="let item of defaultSideBar"
+        >
+          <a
+            class="sidebar-link"
+            routerLink="{{ item.path }}"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+          >
+            {{ item.name }}
+          </a>
+        </li>
+      </ul>
     </div>
+  </aside>
+  <!-- Main Component -->
+  <!-- <app-sidebar-content
+    (sidebarParentUpdate)="getSidebarUpdate()"
+  ></app-sidebar-content> -->
+  <router-outlet></router-outlet>
 </div>
