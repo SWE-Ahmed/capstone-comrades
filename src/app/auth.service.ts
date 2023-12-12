@@ -1,58 +1,90 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
-import {sendEmailVerification} from 'firebase/auth'
+import { Auth, User, authState, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, signOut} from '@angular/fire/auth';
+import { Subscription } from 'rxjs/internal/Subscription';
+import { Admin, Mentor, Student } from './dataClasses';
+import { PopulateService } from './populate.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-
-  constructor(private afAuth: AngularFireAuth, private router: Router) { }
+  constructor(
+    private router: Router,
+    private afAuth: Auth,
+    private popul8: PopulateService
+  ) {
+    // listen for auth changes throughout the program and adjust accordingly
+    this.authStateSubscription = this.authState$.subscribe((user: User | null) => {
+      if (user !== null) {
+        this.authenticated = true;
+      }
+      else {
+        this.authenticated = false;
+      }
+  })
+  }
+  private authState$ = authState(this.afAuth);
+  private authStateSubscription: Subscription;
   private authenticated: boolean = false;
+  private currentUser!: Student | Mentor | Admin | null;
 
   // sign up method for new users
-  signUp(email: string, password: string): void {
-    this.afAuth.createUserWithEmailAndPassword(email, password)
-      .then(() => {
-        // Sign up successful
-        this.router.navigate([''])
+  signUp(params: any): void {
+    createUserWithEmailAndPassword(this.afAuth, params.email, params.password)
+      .then((user) => {
+        // Sign up successful, need to Sign out
+        this.signOut()
+        // use the same auto-generated uid for creation of document
+        params.id = user.user.uid;
+        // store USERTYPE in DISPLAYNAME property
+        updateProfile(user.user, {
+          displayName: params.accountType
+        }).then(() => {
+          this.popul8.populateDatabase(params);
+          this.router.navigate(['']);
+        }).catch((error) => {
+          // An error occurred
+          console.log(error);
+        })
       })
       .catch((error) => {
         // An error occurred
+        console.log(error);
       });
+      // store the user in the database
   }
   // sign in method for existing users
   signIn(email: string, password: string): void {
-    this.afAuth.signInWithEmailAndPassword(email, password)
+    signInWithEmailAndPassword(this.afAuth, email, password)
       .then(() => {
         // Login successful
-        this.authenticated = true;
-        this.router.navigate(['profile'])
+        // this.currentUser = this.popul8.retrieveUser(user.displayName, user.uid)
+        this.router.navigate(['profile']);
       })
       .catch((error) => {
         // An error occurred
-        console.log(error)
+        console.log(error);
       });
   }
   // sign out method
-  signOut(){
-    this.afAuth.signOut()
-    .then(() => {
-      // Sign Out successful
-      this.authenticated = false;
-      this.router.navigate(['']);
-    })
-    .catch((error) => {
-      // An error occured
-      console.log(error)
-    });
-}
+  signOut() {
+    signOut(this.afAuth)
+      .then(() => {
+        // Sign Out successful
+        this.router.navigate(['']);
+      })
+      .catch((error) => {
+        // An error occured
+        console.log(error);
+      });
+  }
   // get authentication status
   isAuthenticated(): boolean {
     return this.authenticated;
   }
-  // create profile document
-  createProfile(accountDetails: any): void {
+  // get current user
+  getCurrentUser(): Student | Mentor | Admin | null {
+    return this.currentUser;
   }
 }

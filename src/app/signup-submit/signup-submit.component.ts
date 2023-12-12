@@ -12,18 +12,18 @@ export class SignupSubmitComponent {
   constructor(private router: Router, private auth: AuthService) {
   }
 
-  @Input() showFirstToggle: boolean = false;
+  @Input() params: any;
   @Output() updateView = new EventEmitter <boolean> ();
 
   popup: boolean = false;
 
-  closePopup(email: string, password:string): void {
+  closePopup(): void {
     this.popup = false;
-    console.log(email, password)
-    this.auth.signUp(email, password)
+    console.log(this.params)
+    this.auth.signUp(this.params)
   }
 
   goBack(): void {
-    this.updateView.emit(!this.showFirstToggle)
+    this.updateView.emit(!this.params.showFirst)
   }
 }

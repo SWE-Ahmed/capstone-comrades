@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, OnInit, inject } from '@angular/core';
 import { AuthService } from 'src/app/auth.service';
 import { ChangeDetectorRef } from '@angular/core';
+import { DataService } from 'src/app/data.service';
+import { PopulateService } from 'src/app/populate.service';
 
 @Component({
   selector: 'navbarheader',
@@ -8,15 +10,24 @@ import { ChangeDetectorRef } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarHeaderComponent{
-  constructor( private cdref: ChangeDetectorRef ) {}   
+  constructor( private cdref: ChangeDetectorRef ) {}
 
   ngAfterContentChecked() {
-    this.navList = this.auth.isAuthenticated() ? this.navIn : this.navOut;
+    if (this.auth.isAuthenticated() && this.auth.getCurrentUser() !== null) {
+      this.navIn[1].name = this.auth.getCurrentUser()?.name.get('firstName')
+      this.navList = this.navIn
+    }
+    else {
+      this.navList = this.navOut;
+    }
+    // this.navList = this.auth.isAuthenticated() ? this.navIn : this.navOut;
     this.cdref.detectChanges();
   }
 
   auth = inject(AuthService);
-  navList: any 
+  data = inject(DataService);
+  popul8 = inject(PopulateService);
+  navList: any;
   navOut: any = [
     {
       name: 'Home',
@@ -45,7 +56,7 @@ export class NavbarHeaderComponent{
       path: '',
     },
     {
-      name: 'USERNAME',
+      name: '',
       path: 'profile',
     },
     {

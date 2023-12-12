@@ -16,10 +16,14 @@ export class SignupComponent {
     accountType: '',
     email: '',
     phoneNumber: '',
+    password: '',
+    confirmPassword: '',
   };
   // proceed to next form in the signup page
   nextForm(): void {
-    this.params.accountType = document.querySelectorAll('#dropdownMenuButton')[0].textContent
+    this.params.accountType = document.querySelectorAll(
+      '#dropdownMenuButton'
+    )[0].textContent?.trim();
     this.params.showFirst = false;
   }
   // change the account type based on the one chosen by the user

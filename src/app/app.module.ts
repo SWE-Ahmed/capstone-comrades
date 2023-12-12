@@ -29,10 +29,10 @@ import { RequestFormComponent } from './request-form/request-form.component';
 import { PastProjectsViewComponent } from './past-projects-view/past-projects-view.component';
 import { PastProjectCardComponent } from './past-projects-view/past-project-card/past-project-card.component';
 import { ProjectPageComponent } from './project-page/project-page.component';
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from '../environments/environment';
-
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { getAuth, provideAuth } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -68,8 +68,9 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
+    provideAuth(() => getAuth()),
   ],
   providers: [CardService],
   bootstrap: [AppComponent]
