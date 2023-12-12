@@ -15,9 +15,10 @@ export class AuthService {
     private popul8: PopulateService
   ) {
     // listen for auth changes throughout the program and adjust accordingly
-    this.authStateSubscription = this.authState$.subscribe((user: User | null) => {
+    this.authStateSubscription = this.authState$.subscribe(async (user: User | null) => {
       if (user !== null) {
         this.authenticated = true;
+        this.currentUser = await this.popul8.retrieveUser(user.displayName, user.uid);
       }
       else {
         this.authenticated = false;
@@ -59,7 +60,6 @@ export class AuthService {
     signInWithEmailAndPassword(this.afAuth, email, password)
       .then(() => {
         // Login successful
-        // this.currentUser = this.popul8.retrieveUser(user.displayName, user.uid)
         this.router.navigate(['profile']);
       })
       .catch((error) => {

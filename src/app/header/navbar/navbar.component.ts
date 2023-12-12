@@ -10,23 +10,34 @@ import { PopulateService } from 'src/app/populate.service';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarHeaderComponent{
-  constructor( private cdref: ChangeDetectorRef ) {}
+  constructor(
+    private cdref: ChangeDetectorRef,
+    private data: DataService,
+    private popul8: PopulateService,
+    private auth: AuthService) {}
 
   ngAfterContentChecked() {
-    if (this.auth.isAuthenticated() && this.auth.getCurrentUser() !== null) {
-      this.navIn[1].name = this.auth.getCurrentUser()?.name.get('firstName')
-      this.navList = this.navIn
-    }
-    else {
+    const currentUser = this.auth.getCurrentUser();
+  
+    if (this.auth.isAuthenticated() && currentUser !== null && currentUser !== undefined) {
+      const userName = currentUser.name;
+      
+      if (userName !== null && userName !== undefined) {
+        console.log('User Name:', userName);
+        this.navIn[1].name = JSON.parse(JSON.stringify(userName)).firstName;
+        this.navList = this.navIn;
+      } else {
+        console.warn('User name is null or undefined.');
+        // Handle the case when user name is null or undefined
+      }
+    } else {
       this.navList = this.navOut;
     }
-    // this.navList = this.auth.isAuthenticated() ? this.navIn : this.navOut;
+  
     this.cdref.detectChanges();
   }
+    
 
-  auth = inject(AuthService);
-  data = inject(DataService);
-  popul8 = inject(PopulateService);
   navList: any;
   navOut: any = [
     {

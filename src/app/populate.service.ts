@@ -14,14 +14,14 @@ export class PopulateService {
     this.afData.createAccount(params)
   }
   // get the current user data
-  retrieveUser(_type: string | null, uid: string): Student | Mentor | Admin | null {
-    let data: Student | Mentor | Admin | null = null;
-    this.afData.getUserData(_type, uid).then((data: Student | Mentor | Admin) => {
-      data =  data;
-    })
-    .catch((error) => {
-      console.log(error);
-    })
-    return data;
+  async retrieveUser(_type: string | null, uid: string): Promise<Student | Mentor | Admin | null> {
+    try {
+      const data = await this.afData.getUserData(_type, uid);
+      return data;
+    } 
+    catch (error) {
+      console.error(error);
+      return null;
+    }
   }
 }

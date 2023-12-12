@@ -42,22 +42,19 @@ export class DataService {
       collectionName = _type;
     }
     // resolve the promise and return a casted document data
-    return new Promise(async (resolve, reject) => {
-      await getDoc(doc(this.firestore, collectionName, uid)).then(
-        (snapshot: DocumentSnapshot) => {
-          if (snapshot.exists()) {
-            if (collectionName === 'Student') {
-              resolve(studentConvertor.fromFirestore(snapshot, {}));
-            }
-            else if (collectionName === 'Mentor') {
-              resolve(mentorConvertor.fromFirestore(snapshot, {}));
-            }
-            else {
-              resolve(adminConvertor.fromFirestore(snapshot, {}));
-            }
-          }
-        }
-      );
-    })
+    const snapshot = await getDoc(doc(this.firestore, collectionName, uid));
+    
+    if (snapshot.exists()) {
+      if (collectionName === 'Student') {
+        return studentConvertor.fromFirestore(snapshot, {});
+      } else if (collectionName === 'Mentor') {
+        return mentorConvertor.fromFirestore(snapshot, {});
+      } else {
+        return adminConvertor.fromFirestore(snapshot, {});
+      }
+    } else {
+      throw new Error('User not found');
+    }
   }
+  
 }
