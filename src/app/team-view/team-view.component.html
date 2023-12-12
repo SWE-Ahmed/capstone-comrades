@@ -1,5 +1,4 @@
-
- <div class="container">
+<div class="container">
   <div class="row mb-3">
     <div *ngFor="let card of allCards.slice(0, visibleCardCount); let i=index" class="col-md-4" [@fadeInOut]>
       <team-card [card]="card" [modalId]="'pop-up'+i"></team-card>

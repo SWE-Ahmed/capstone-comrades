@@ -32,6 +32,7 @@ import { ProjectPageComponent } from './project-page/project-page.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from '../environments/environment';
+import { PublishFormComponent } from './publish-form/publish-form.component';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { environment } from '../environments/environment';
     RequestFormComponent,
     PastProjectsViewComponent,
     PastProjectCardComponent,
-    ProjectPageComponent
+    ProjectPageComponent,
+    PublishFormComponent
   ],
   imports: [
     HttpClientModule,

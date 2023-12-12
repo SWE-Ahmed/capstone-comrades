@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row mb-5 mt-5">
+    <p id="title" class="">
+      Sharing the Final Project to be Published in the Website
+    </p>
+  </div>
+  <div class="row mb-5">
+    <div class="form-group">
+      <label for="name"><p>Name</p></label>
+      <textarea
+        type="text"
+        class="textField form-control align-top"
+        id="name"
+      ></textarea>
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="form-group">
+      <label for="about"><p>About</p></label>
+      <textarea
+        type="text"
+        class="textField form-control align-top"
+        id="about"
+      ></textarea>
+    </div>
+  </div>
+  <div class="row mb-5 d-flex justify-content-center">
+    <label for="">Pictures</label>
+    <div *ngFor="let index of [0, 1, 2, 3]" class="col-md-3">
+      <img
+        [src]="selectedImages[index] || 'assets/blank-image.png'"
+        class="img-fluid"
+        alt="Selected Image"
+        (click)="openFileInput(index)"
+      />
+      <input
+        type="file"
+        [id]="'image' + (index + 1)"
+        accept="image/*"
+        style="display: none"
+        (change)="onImageSelected($event, index)"
+      />
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="form-group">
+      <label for="info"><p>Extra information</p></label>
+      <textarea
+        type="text"
+        class="textField form-control align-top"
+        id="info"
+      ></textarea>
+    </div>
+  </div>
+
+  <div class="row mb-5 d-flex justify-content-center align-items-center">
+    <button class="btn btn-success">Submit</button>
+  </div>
+</div>

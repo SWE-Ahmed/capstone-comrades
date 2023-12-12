@@ -12,6 +12,7 @@ import { authGuard } from './auth.guard';
 import { SignupSubmitComponent } from './signup-submit/signup-submit.component';
 import { StudentViewComponent } from './student-view/student-view.component';
 import { TeamViewComponent } from './team-view/team-view.component';
+import { PublishFormComponent } from './publish-form/publish-form.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -50,6 +51,10 @@ const routes: Routes = [
     path: 'teams',
     component: TeamViewComponent,
   },
+  {
+    path: 'publish',
+    component:PublishFormComponent,
+  }
 ];
 
 @NgModule({
