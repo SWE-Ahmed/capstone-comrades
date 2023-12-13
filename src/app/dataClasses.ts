@@ -6,22 +6,40 @@ import {
 
 export class Student {
   email: string;
-  name: Map<string, string>;
+  name: any;
   type: string;
   id: string;
   phoneNumber: string;
+  about: string;
+  specialization: string;
+  major: string;
+  skills: string;
+  links: string;
+  team: string;
   constructor(
-    name: Map<string, string>,
+    name: any,
     type: string,
     email: string,
     phoneNumber: string,
-    id: string
+    id: string,
+    about: string,
+    major: string,
+    specialization: string,
+    skills: string,
+    links: string,
+    team: string,
   ) {
     this.email = email;
     this.name = name;
     this.type = type;
     this.id = id;
     this.phoneNumber = phoneNumber;
+    this.about = about;
+    this.specialization = specialization;
+    this.skills = skills;
+    this.major = major;
+    this.links = links;
+    this.team = team;
   }
   toString() {
     return (
@@ -33,60 +51,36 @@ export class Student {
       ', ' +
       this.type +
       ', ' +
-      this.id
-    );
-  }
-}
-
-export class Profile {
-  about: string;
-  specialization: string;
-  major: string;
-  id: string;
-  link: [string];
-  constructor(
-    about: string,
-    major: string,
-    specialization: string,
-    link: [string],
-    id: string
-  ) {
-    this.about = about;
-    this.specialization = specialization;
-    this.major = major;
-    this.id = id;
-    this.link = link;
-  }
-  toString() {
-    return (
+      this.id +
+      ', ' +
       this.about +
       ', ' +
       this.major +
       ', ' +
       this.specialization +
       ', ' +
-      this.link +
+      this.skills +
       ', ' +
-      this.id
+      this.links +
+      ', ' +
+      this.team
     );
   }
 }
 
 export class Admin {
   type: string;
-  name:  Map<string, string>;
+  name: any;
   email: string;
   id: string;
-  constructor(type: string, name:  Map<string, string>, email: string, id: string) {
+  constructor(type: string, name: any, email: string, id: string) {
     this.type = type;
     this.name = name;
     this.email = email;
     this.id = id;
   }
   toString() {
-    return (
-      this.name + ', ' + this.email + ', ' + this.type + ', ' + this.id
-    );
+    return this.name + ', ' + this.email + ', ' + this.type + ', ' + this.id;
   }
 }
 
@@ -142,14 +136,14 @@ export class Mentor {
   status: string;
   specialization: string;
   major: string;
-  name: Map<string, string>;
+  name: any;
   email: string;
   id: string;
   constructor(
     status: string,
     specialization: string,
     major: string,
-    name: Map<string, string>,
+    name: any,
     email: string,
     id: string
   ) {
@@ -259,10 +253,16 @@ export const studentConvertor = {
   toFirestore: (student: Student) => {
     return {
       name: student.name,
+      type: student.type,
       email: student.email,
       phoneNumber: student.phoneNumber,
-      type: student.type,
       id: student.id,
+      about: student.about,
+      major: student.major,
+      specialization: student.specialization,
+      skills: student.skills,
+      links: student.links,
+      team: student.team,
     };
   },
   fromFirestore: (snapshot: DocumentSnapshot, options: SnapshotOptions) => {
@@ -272,29 +272,13 @@ export const studentConvertor = {
       data?.['type'],
       data?.['email'],
       data?.['phoneNumber'],
-      data?.['id']
-    );
-  },
-};
-
-export const profileConvertor = {
-  toFirestore: (profile: Profile) => {
-    return {
-      about: profile.about,
-      specialization: profile.specialization,
-      major: profile.major,
-      id: profile.id,
-      link: profile.link,
-    };
-  },
-  fromFirestore: (snapshot: DocumentSnapshot, options: SnapshotOptions) => {
-    const data = snapshot.data(options);
-    return new Profile(
+      data?.['id'],
       data?.['about'],
       data?.['major'],
       data?.['specialization'],
-      data?.['link'],
-      data?.['id']
+      data?.['skills'],
+      data?.['links'],
+      data?.['team'],
     );
   },
 };

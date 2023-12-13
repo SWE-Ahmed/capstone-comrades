@@ -12,18 +12,15 @@ import { PopulateService } from 'src/app/populate.service';
 export class NavbarHeaderComponent{
   constructor(
     private cdref: ChangeDetectorRef,
-    private data: DataService,
-    private popul8: PopulateService,
     private auth: AuthService) {}
 
   ngAfterContentChecked() {
     const currentUser = this.auth.getCurrentUser();
-  
+
     if (this.auth.isAuthenticated() && currentUser !== null && currentUser !== undefined) {
       const userName = currentUser.name;
-      
+
       if (userName !== null && userName !== undefined) {
-        console.log('User Name:', userName);
         this.navIn[1].name = JSON.parse(JSON.stringify(userName)).firstName;
         this.navList = this.navIn;
       } else {
@@ -33,10 +30,10 @@ export class NavbarHeaderComponent{
     } else {
       this.navList = this.navOut;
     }
-  
+
     this.cdref.detectChanges();
   }
-    
+
 
   navList: any;
   navOut: any = [

@@ -21,11 +21,11 @@
               <!-- Card Content -->
               <div class="card-text">
                   <p class="tags">Name: </p>
-                  <p>{{ card.name }}</p>
+                  <p>{{ card.name.firstName }} {{card.name.lastName}}</p>
               </div>
               <div class="card-text">
                   <p class="tags">KFUPM ID: </p>
-                  <p>{{ card.kfupmId }}</p>
+                  <p>{{ (card.email).slice(1, 10) }}</p>
               </div>
               <div class="card-text">
                   <p class="tags">Major: </p>
@@ -33,7 +33,7 @@
               </div>
               <div class="card-text">
                   <p class="tags">Concentration: </p>
-                  <p>{{ card.concentration }}</p>
+                  <p>{{ card.specialization }}</p>
               </div>
               <a [attr.href]="'#'+modalId" data-bs-toggle="modal">Show more >></a>
           </div>

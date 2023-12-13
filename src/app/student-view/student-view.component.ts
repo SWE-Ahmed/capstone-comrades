@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CardService } from 'src/app/services/card.service';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { DataService } from '../data.service';
+import { Student } from '../dataClasses';
 
 @Component({
   selector: 'app-student-view',
@@ -20,17 +22,25 @@ export class StudentViewComponent implements OnInit {
   visibleCardCount = 6;
   showMore = true;
 
-  constructor(private cardService: CardService) {}
+  constructor(private cardService: CardService, private data: DataService) {}
 
   ngOnInit(): void {
-    this.cardService.getStudentCards().subscribe((data) => {
-      this.cards = data;
+    this.cardService.getStudentCards().subscribe(async (data) => {
+      // resolve the promise and populate the studentList
+      let studentList: Student[] = [];
+      try {
+        studentList = await this.data.getAllStudents();
+      }
+      catch (error) {
+        console.error(error);
+      }
+      this.cards = studentList;
       this.updateVisibleCards();
     });
   }
 
   showMoreCards() {
-    this.visibleCardCount += 6; 
+    this.visibleCardCount += 6;
     this.updateVisibleCards();
   }
 

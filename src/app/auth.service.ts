@@ -53,7 +53,6 @@ export class AuthService {
         // An error occurred
         console.log(error);
       });
-      // store the user in the database
   }
   // sign in method for existing users
   signIn(email: string, password: string): void {
