@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { DataService } from '../data.service';
+import { Student, Team } from '../dataClasses';
 
 @Component({
   selector: 'pop-up',
@@ -9,4 +11,8 @@ export class PopUpComponent {
   @Input() info: any;
   @Input() type: string = '';
   @Input() modalId: string = '';
+
+  constructor(private data: DataService){}
+
+
 }

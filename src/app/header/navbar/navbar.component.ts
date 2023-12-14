@@ -9,15 +9,21 @@ import { PopulateService } from 'src/app/populate.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
-export class NavbarHeaderComponent{
+export class NavbarHeaderComponent implements OnInit{
+  private isAuthenticated: boolean = false;
   constructor(
     private cdref: ChangeDetectorRef,
     private auth: AuthService) {}
+    ngOnInit() {
+      this.auth.isAuthenticated().subscribe((isAuthenticated) => {
+        this.isAuthenticated = isAuthenticated;
+      });
+    }
 
   ngAfterContentChecked() {
     const currentUser = this.auth.getCurrentUser();
 
-    if (this.auth.isAuthenticated() && currentUser !== null && currentUser !== undefined) {
+    if (this.isAuthenticated && currentUser !== null && currentUser !== undefined) {
       this.userName = currentUser.name;
       this.signedIn = true
 

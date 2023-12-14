@@ -178,13 +178,21 @@ export class Team {
   about: string;
   status: string;
   id: string;
+  majors: string[];
+  project: string;
+  term: string;
+  mentor: string;
   constructor(
     name: string,
     field: string,
     picture: string,
     about: string,
     status: string,
-    id: string
+    id: string,
+    majors: string[],
+    project: string,
+    term: string,
+    mentor: string,
   ) {
     this.name = name;
     this.field = field;
@@ -192,6 +200,10 @@ export class Team {
     this.about = about;
     this.status = status;
     this.id = id;
+    this.majors = majors;
+    this.project = project;
+    this.term = term;
+    this.mentor = mentor;
   }
   toString() {
     return (
@@ -205,7 +217,15 @@ export class Team {
       ', ' +
       this.status +
       ', ' +
-      this.id
+      this.id +
+      ', ' +
+      this.majors +
+      ', ' +
+      this.project +
+      ', ' +
+      this.term +
+      ', ' +
+      this.mentor
     );
   }
 }
@@ -372,6 +392,10 @@ export const teamConvertor = {
       about: team.about,
       status: team.status,
       id: team.id,
+      majors: team.majors,
+      project: team.project,
+      term: team.term,
+      mentor: team.mentor,
     };
   },
   fromFirestore: (snapshot: DocumentSnapshot, options: SnapshotOptions) => {
@@ -382,7 +406,12 @@ export const teamConvertor = {
       data?.['picture'],
       data?.['about'],
       data?.['status'],
-      data?.['id']
+      data?.['id'],
+      data?.['majors'],
+      data?.['project'],
+      data?.['term'],
+      data?.['mentor'],
+
     );
   },
 };

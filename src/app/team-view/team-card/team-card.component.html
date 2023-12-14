@@ -8,15 +8,11 @@
       </div>
       <div class="card-text">
         <p class="tags">Current Members Majors: </p>
-        <p>{{ card.currentMembersMajors }}</p>
-      </div>
-      <div class="card-text">
-        <p class="tags">Wanted Majors: </p>
-        <p>{{ card.wantedMajors }}</p>
+        <p>{{ card.majors }}</p>
       </div>
       <div class="card-text">
         <p class="tags">Project Concentration: </p>
-        <p>{{ card.projectConcentration }}</p>
+        <p>{{card.field}}</p>
       </div>
       <div class="text-center">
         <a [attr.href]="'#'+modalId" data-bs-toggle="modal">Show more >></a>
