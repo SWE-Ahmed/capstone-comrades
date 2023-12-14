@@ -12,32 +12,33 @@ import { PopulateService } from 'src/app/populate.service';
 export class NavbarHeaderComponent{
   constructor(
     private cdref: ChangeDetectorRef,
-    private data: DataService,
-    private popul8: PopulateService,
     private auth: AuthService) {}
 
   ngAfterContentChecked() {
     const currentUser = this.auth.getCurrentUser();
-  
+
     if (this.auth.isAuthenticated() && currentUser !== null && currentUser !== undefined) {
-      const userName = currentUser.name;
-      
-      if (userName !== null && userName !== undefined) {
-        console.log('User Name:', userName);
-        this.navIn[1].name = JSON.parse(JSON.stringify(userName)).firstName;
+      this.userName = currentUser.name;
+      this.signedIn = true
+
+      if (this.userName !== null && this.userName !== undefined) {
+        this.userName = currentUser.name.firstName;
         this.navList = this.navIn;
       } else {
         console.warn('User name is null or undefined.');
         // Handle the case when user name is null or undefined
       }
     } else {
+      this.signedIn = false;
       this.navList = this.navOut;
     }
-  
+
     this.cdref.detectChanges();
   }
-    
 
+
+  signedIn: boolean = false;
+  userName: string = 'Sign In';
   navList: any;
   navOut: any = [
     {
@@ -83,4 +84,9 @@ export class NavbarHeaderComponent{
       path: 'projects',
     },
   ];
+
+  // sign out the current user from the logout item in the navbar
+  signOutNav(): void {
+    this.auth.signOut();
+  }
 }

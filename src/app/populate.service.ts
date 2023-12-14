@@ -18,7 +18,7 @@ export class PopulateService {
     try {
       const data = await this.afData.getUserData(_type, uid);
       return data;
-    } 
+    }
     catch (error) {
       console.error(error);
       return null;

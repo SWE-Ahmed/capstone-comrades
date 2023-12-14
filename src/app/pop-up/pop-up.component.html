@@ -24,7 +24,7 @@
       </div>
     </div>
   </div>
-  
+
 
 <ng-template #requestContent>
     <div class="text-left">
@@ -41,22 +41,20 @@
     Ali Alqutayfi
     </div>
 </ng-template>
-  
+
 
 <ng-template #studentContent>
-    <p class="bold">Name:</p>{{info.name}}
+    <p class="bold">Name:</p>{{info.name.firstName}} {{info.name.lastName}}
     <p class="bold">Team:</p>{{info.team}}
     <p class="bold">Major:</p>{{info.major}}
     <br>
-    <p class="bold">Skills:</p>Software Engineering Life Sycle Expert, AI, Web Engineering, Phone Apps Development, Desktop Applications Development, Telegram/WhatsApp Bots Development, Problem Solving, Data Structure and Algorithm Expert, Database Engineering, UI&UX, Data Analysis/Analytics, Project Management, Leadership, Teamwork.
+    <p class="bold">Skills:</p>{{info.skills}}
     <br>
-    <p class="bold">About:</p>Hi, I'm Abdulmohseen AlAli, a software engineering student with a passion for creating innovative solutions that make a real impact. With expertise in AI, web development, and mobile app development, I've got the skills to bring your ideas to life. I'm also well-versed in data analysis, UI/UX design, and project management, so you can be sure that your project is in good hands. Let's collaborate and turn your vision into a reality!
+    <p class="bold">About:</p>{{info.about}}
     <br>
-    <p class="bold">Links:</p>LinkedIn: https://www.linkedin.com/in/abdulmohseenalialali/
-    GitHub: https://github.com/ABDULMOHSEEN-AlAli
-
+    <p class="bold">Links:</p>{{info.links}}
 </ng-template>
-  
+
 
 <ng-template #teamContent>
     <p class="bold">Name:</p>{{info.name}}
@@ -69,7 +67,7 @@
     <br>
     <p class="bold">About:</p>Welcome to Tech Titans! We're a team of developers, designers, and project managers passionate about creating a seamless platform for students to connect and form teams for their final year projects. Our goal is to simplify the team formation process, so students can focus on their projects and achieve academic success.
 </ng-template>
-  
+
 <ng-template #requestFooter>
   <button type="button" class="btn btn-success" data-bs-dismiss="modal">Accept</button>
   <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Reject</button>
