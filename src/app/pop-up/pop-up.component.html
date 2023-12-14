@@ -69,8 +69,13 @@
 </ng-template>
 
 <ng-template #requestFooter>
-  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Accept</button>
-  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Reject</button>
+  <ng-container *ngIf="info.status === 'pending'; else statusDisplay">
+    <button class="btn btn-success" data-bs-dismiss="modal" (click)="updateStatus('accepted')">Accept</button>
+    <button class="btn btn-danger" data-bs-dismiss="modal" (click)="updateStatus('rejected')">Reject</button>
+  </ng-container>
+  <ng-template #statusDisplay>
+      {{info.status}}
+  </ng-template>
 </ng-template>
 
 <ng-template #commonFooter>

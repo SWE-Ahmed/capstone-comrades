@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'pop-up',
@@ -9,4 +9,10 @@ export class PopUpComponent {
   @Input() info: any;
   @Input() type: string = '';
   @Input() modalId: string = '';
+  @Output() statusChanged: EventEmitter<string> = new EventEmitter<string>();
+    
+  updateStatus(newStatus: string): void {
+    this.info.status = newStatus;
+    this.statusChanged.emit(this.info.status); // Emit the updated status
+  }
 }
