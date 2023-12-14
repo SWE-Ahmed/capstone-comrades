@@ -1,23 +1,61 @@
-<div class="container">
-    <h1>Sign In</h1>
-    <!--Email box-->
-    <div id="boxWrapper">
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" #emailValue id="exampleFormControlInput1" placeholder="2020XXXXX@kfupm.edu.sa">
+<div class="position-relative">
+  <img *ngIf="isLargeScreen" src="assets/compass_icon.png" class="img-fluid position-absolute bottom-0 start-0 mb-n10" alt="Compass Icon" width="200px" height="200px">
+  <img *ngIf="isLargeScreen" src="assets/bulb_icon.png" class="img-fluid position-absolute end-0 bottom-0" alt="Bulb Icon" width="200px" height="200px">
+
+<div class="container mt-5 rounded-5" id="login" [ngStyle]="{'background': '#9fa2a8', 'box-shadow': isLargeScreen ? '-25px -25px 4px 10px rgba(0, 0, 0, 0.50)' : 'none', 'max-width': isLargeScreen ? '50%' : '90%'}">
+    <p class="text-center text-success display-1 fw-bold">Login</p>
+  
+    <!-- Email box -->
+    <div class="row mt-3">
+      <div class="col-md-6 offset-md-3"> 
+        <div class="form-group mx-2">
+          <label for="exampleFormControlInput1" class="form-label text-success fw-medium">Email</label>
+          <input type="email" class="form-control-lg rounded-pill mx-auto d-block" #emailValue
+            id="exampleFormControlInput1" placeholder="2020XXXXX@kfupm.edu.sa" style="width: 100%">
         </div>
-        <!--Password box-->
-        <div class="mb-3">
-            <label for="inputPassword5" class="form-label">Password</label>
-            <input type="password" id="inputPassword5" class="form-control" #passwordValue aria-describedby="passwordHelpBlock">
-        </div>
-        <label class="forgotPass">Forgot Passowrd?</label>
+      </div>
     </div>
-    <div id="btnWrapper">
-        <button type="button" class="btn btn-success" (click)="launchProfile(emailValue.value, passwordValue.value)">Sign In</button>
+  
+    <!-- Password box -->
+    <div class="row mt-3">
+      <div class="col-md-6 offset-md-3 position-relative"> 
+        <div class="form-group mx-2">
+          <label for="inputPassword5" class="form-label text-success fw-medium">Password</label>
+          <input type="password" id="inputPassword5" class="form-control-lg rounded-pill mx-auto d-block"
+            #passwordValue aria-describedby="passwordHelpBlock" style="width: 100%">
+          <i
+          *ngIf="!showPass"
+          class="fa-solid fa-eye-slash position-absolute end-0"
+          (click)="togglePasswordVisibility()"
+        ></i>
+        <i
+          *ngIf="showPass"
+          class="fa-solid fa-eye position-absolute end-0"
+          (click)="togglePasswordVisibility()"
+        ></i>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row mb-5 mt-1">
+      <div class="col-md-6 offset-md-3 text-center">
+        <a href="" class="">Forgot password</a>
+      </div>
+    </div>
+  
+    <div class="row mt-3">
+      <div class="col-md-12 d-flex justify-content-center">
+        <button type="button" class="btn btn-success btn-lg rounded-pill btn-lg mb-3 fw-bold fs-4 p-3 w-25"
+          (click)="launchProfile(emailValue.value, passwordValue.value)">
+          Log in
+        </button>
+      </div>
     </div>
 </div>
-<div class="imageRow">
+
+</div>
+
+<!-- <div class="imageRow">
     <img src="assets/compass_icon.png" width="200px" height="200px">
     <img src="assets/bulb_icon.png" width="200px" height="200px">
-</div>
+</div> -->

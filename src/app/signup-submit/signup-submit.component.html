@@ -1,32 +1,71 @@
-<div class="container">
-    <h1>Sign Up</h1>
-    <form #signUpFormSubmit="ngForm" (ngSubmit)="popup = true">
-      <div id="boxWrapper">
-          <!--Email box-->
-          <div class="mb-3">
-              <label for="inputPassword5" class="form-label">Password</label>
-              <input name="password" [(ngModel)]="params.password" type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-          </div>
-          <!--Password box-->
-          <div class="mb-3">
-              <label for="inputPassword5" class="form-label">Confirm Password</label>
-              <input name="confirmPassword" [(ngModel)]="params.confirmPassword" type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-          </div>
+<!-- Sign Up Form -->
+<div class="container mt-5 mb-3 rounded-5" [ngStyle]="{'background': '#9fa2a8', 'max-width': isLargeScreen ? '50%' : '90%'}">
+  <p class="text-center text-success display-1 fw-bold">Sign Up</p>
+  <form #signUpFormSubmit="ngForm" (ngSubmit)="popup = true" class="mt-3">
+    <!-- Password Input -->
+    <div class="row mt-3">
+      <div class="col-md-6 offset-md-3">
+        <div class="form-group">
+          <label for="inputPassword5" class="form-label text-success fw-medium">Password</label>
+          <input name="password" [(ngModel)]="params.password" type="password" id="inputPassword5" class="form-control-lg rounded-pill mx-auto d-block" aria-describedby="passwordHelpBlock" style="width: 100%;">
+        </div>
       </div>
-      <div id="btnWrapper">
-          <button type="button" class="btn btn-info" (click)="goBack()">Back</button>
-          <button type="button" class="btn btn-success" (click)="popup = true">Sign Up</button>
+    </div>
+
+    <!-- Confirm Password Input -->
+    <div class="row mt-3">
+      <div class="col-md-6 offset-md-3">
+        <div class="form-group">
+          <label for="confirmPassword" class="form-label text-success fw-medium">Confirm Password</label>
+          <input name="confirmPassword" [(ngModel)]="params.confirmPassword" type="password" id="confirmPassword" class="form-control-lg rounded-pill mx-auto d-block" aria-describedby="passwordHelpBlock" style="width: 100%;">
+        </div>
       </div>
-    </form>
+    </div>
+
+    <!-- Agreement Checkbox -->
+    <div class="row mt-3">
+      <div class="col-md-12 d-flex justify-content-center">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="agreeCheckbox">
+          <label class="form-check-label" for="agreeCheckbox">
+            I agree to the <a href="your_terms_and_conditions_link">terms and conditions</a>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign Up Button -->
+    <div class="row mt-3">
+      <div class="col-lg-12 d-flex justify-content-center">
+        <button
+          type="submit"
+          class="btn btn-success btn-lg rounded-pill btn-lg mb-3 fw-bold fs-4"
+          style="width: 200px;"
+          (click)="popup = true"
+        >
+          Sign Up
+        </button>
+      </div>
+    </div>
+  </form>
 </div>
 
-<div class="modal-dialog modal-dialog-centered" data-backdrop="false" *ngIf="popup">
-	<div class="popup">
-		<h2>Confirmation Email Sent!</h2>
-		<div class="content">
-            We have sent a confirmation email to S2020XXXXX@kfupm.edu.sa. Please activate
-            your account through the link to successfully create your account.
-		</div>
+<!-- Popup Modal -->
+<div class="modal fade" id="confirmationModal" [class.show]="popup" [class.d-block]="popup">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header border-bottom border-2 border-secondary">
+        <h2 class="modal-title fw-bold">Confirmation Email Sent!</h2>
+        <button type="button" class="btn-close" (click)="closePopup()"></button>
+      </div>
+      <div class="modal-body text-light">
+        <div class="content">
+          We have sent a confirmation email to S2020XXXXX@kfupm.edu.sa. Please activate your account through the link to successfully create your account.
+        </div>
+      </div>
+      <div class="modal-footer border-top border-2 border-secondary">
         <button type="button" class="btn btn-success" (click)="closePopup()">Ok</button>
-	</div>
+      </div>
+    </div>
+  </div>
 </div>
