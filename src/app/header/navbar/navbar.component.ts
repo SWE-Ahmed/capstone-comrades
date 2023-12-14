@@ -68,10 +68,6 @@ export class NavbarHeaderComponent{
       path: '',
     },
     {
-      name: '',
-      path: 'profile',
-    },
-    {
       name: 'Teams',
       path: 'teams',
     },
