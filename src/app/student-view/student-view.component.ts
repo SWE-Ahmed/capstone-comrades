@@ -24,8 +24,7 @@ export class StudentViewComponent implements OnInit {
 
   constructor(private cardService: CardService, private data: DataService) {}
 
-  ngOnInit(): void {
-    this.cardService.getStudentCards().subscribe(async (data) => {
+  async ngOnInit(): Promise<void> {
       // resolve the promise and populate the studentList
       let studentList: Student[] = [];
       try {
@@ -36,7 +35,6 @@ export class StudentViewComponent implements OnInit {
       }
       this.cards = studentList;
       this.updateVisibleCards();
-    });
   }
 
   showMoreCards() {

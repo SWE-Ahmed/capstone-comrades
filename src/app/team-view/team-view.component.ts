@@ -1,6 +1,7 @@
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { CardService } from "src/app/services/card.service"
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-team-view',
@@ -18,17 +19,15 @@ import { CardService } from "src/app/services/card.service"
 export class TeamViewComponent implements OnInit {
   allCards: any[] = [];
   visibleCardCount = 9;
-  showMore = true; 
+  showMore = true;
 
-  constructor(private cardService: CardService) {}
+  constructor(private cardService: CardService, private data: DataService) {}
 
-  ngOnInit(): void {
-    this.cardService.getTeamCards().subscribe((data) => {
-      this.allCards = data;
-      this.updateVisibleCards();
-    });
+  async ngOnInit(): Promise<void> {
+    this.allCards = await this.data.getAllTeams();
+    this.updateVisibleCards();
   }
-  
+
 
   // onSearch(query: string): void {
   //   this.cardService.searchCards(query).subscribe((filteredCards) => {
@@ -38,7 +37,7 @@ export class TeamViewComponent implements OnInit {
   // }
 
   showMoreCards() {
-    this.visibleCardCount += 6; 
+    this.visibleCardCount += 6;
     this.updateVisibleCards();
   }
 

@@ -39,24 +39,29 @@ const routes: Routes = [
   {
     path: 'show-requests',
     component: ShowRequestsComponent,
+    canActivate: [authGuard],
   },
   {
     path: 'request-form',
     component: RequestFormComponent,
+    canActivate: [authGuard],
   },
-  { path: 'projects', component: PastProjectsViewComponent },
-  { path: 'projects/:projectId', component: ProjectPageComponent },
+  { path: 'projects', component: PastProjectsViewComponent, canActivate: [authGuard],},
+  { path: 'projects/:projectId', component: ProjectPageComponent, canActivate: [authGuard], },
   {
     path: 'students',
     component: StudentViewComponent,
+    canActivate: [authGuard],
   },
   {
     path: 'teams',
     component: TeamViewComponent,
+    canActivate: [authGuard],
   },
   {
     path: 'sidebar',
     component: SidebarComponent,
+    canActivate: [authGuard],
     children: [{
       path: '',
       component: SidebarContentComponent,
@@ -90,6 +95,11 @@ const routes: Routes = [
       component: SidebaritemComponent,
     },
   ]
+  },
+  {
+    path: 'myteam',
+    component: MyTeamComponent,
+    canActivate: [authGuard],
   }
 ];
 
