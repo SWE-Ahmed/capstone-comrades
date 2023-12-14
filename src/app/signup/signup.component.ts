@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router} from '@angular/router';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-signup',
@@ -7,7 +8,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent {
-  constructor(private router: Router) {}
+  isLargeScreen: boolean = true;  // Default to true for larger screens
+
+  constructor(private router: Router,private breakpointObserver: BreakpointObserver) {}
+
+  ngOnInit() {
+    this.breakpointObserver.observe([
+      Breakpoints.Small,
+      Breakpoints.XSmall
+    ]).subscribe(result => {
+      this.isLargeScreen = !result.matches;
+    });
+  }
+
   // params acts as the dictionary of data passed in the signup form
   params: any = {
     showFirst: true,

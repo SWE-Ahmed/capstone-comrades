@@ -23,6 +23,43 @@
 
 <div class="container" id="requests">
 
+  <!-- Inside your main component template -->
+<div *ngIf="screenSize === 'small' || screenSize === 'xsmall'; else mediumView">
+  <!-- Display as cards on smaller screens -->
+  <div *ngFor="let request of filteredrequests.slice(0, visibleCardCount); let i=index" class="row" [@fadeInOut]>
+    <request-card [screenSize]="'small'" [request]="request" [modalId]="'pop-up'+ i"></request-card>
+    <pop-up [info]="request" [type]="'Request'" [modalId]="'pop-up'+i"></pop-up>
+  </div>
+
+  <div class="col text-center mt-4" *ngIf="showMore">
+    <a (click)="showMoreCards()" >Show more >></a>
+  </div>
+</div>
+
+<ng-template #mediumView>
+  <div *ngIf="screenSize === 'medium'; else desktopView">
+    <div class="row" *ngFor="let request of filteredrequests.slice(0, visibleCardCount); let i=index" [@fadeInOut]>
+      <div class="col-md-6">
+        <!-- First Card -->
+        <request-card [screenSize]="'small'" [request]="request" [modalId]="'pop-up'+ i"></request-card>
+        <pop-up [info]="request" [type]="'Request'" [modalId]="'pop-up'+i"></pop-up>
+      </div>
+      
+      <div class="col-md-6" *ngIf="i + 1 < filteredrequests.length">
+        <!-- Second Card -->
+        <request-card [screenSize]="'small'" [request]="filteredrequests[i + 2]" [modalId]="'pop-up'+ i + 2"></request-card>
+        <pop-up [info]="filteredrequests[i + 2]" [type]="'Request'" [modalId]="'pop-up'+i + 2"></pop-up>
+      </div>
+    </div>
+  
+    <div class="col text-center mt-4" *ngIf="showMore">
+      <a (click)="showMoreCards()">Show more >></a>
+    </div>
+  </div>
+</ng-template>
+
+
+  <ng-template #desktopView>
     <div class="row" id="head">
         <div class="col-md-2 text-center ">
           Type
@@ -42,13 +79,15 @@
       </div>
   
       <div *ngFor="let request of filteredrequests.slice(0, visibleCardCount); let i=index" class="row" [@fadeInOut]>
-        <request-card [request]="request" [modalId]="'pop-up'+ i"></request-card> 
+        <request-card [screenSize]="'large'" [request]="request" [modalId]="'pop-up'+ i"></request-card> 
         <pop-up [info]="request" [type]="'Request'" [modalId]="'pop-up'+i"></pop-up>    
       </div>      
 
-    <div class="col-md-4 mt-4" *ngIf="showMore">
-      <a (click)="showMoreCards()" >Show more >></a>
-    </div>
+      <div class="col-md-4 mt-4" *ngIf="showMore">
+        <a (click)="showMoreCards()" >Show more >></a>
+      </div>
+  </ng-template>
 </div>
+
 
 

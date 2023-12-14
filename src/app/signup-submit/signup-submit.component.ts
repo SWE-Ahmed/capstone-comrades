@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Injectable, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-signup-submit',
@@ -8,8 +9,19 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./signup-submit.component.css']
 })
 export class SignupSubmitComponent {
+  isLargeScreen: boolean = true;  // Default to true for larger screens
 
-  constructor(private router: Router, private auth: AuthService) {
+
+  constructor(private router: Router, private auth: AuthService,private breakpointObserver: BreakpointObserver) {
+  }
+
+  ngOnInit() {
+    this.breakpointObserver.observe([
+      Breakpoints.Small,
+      Breakpoints.XSmall
+    ]).subscribe(result => {
+      this.isLargeScreen = !result.matches;
+    });
   }
 
   @Input() params: any;
